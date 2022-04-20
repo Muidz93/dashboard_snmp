@@ -9,20 +9,106 @@
 <!-- Monit IRD -->
 <div class="container-fluid pt-5 pb-5 bg-light">
   <div class="container text-center">
-    <h2 class="display-3" id="#">Monitoring Status IRD Live</h2>
+    <h2 class="display-6" id="#">Monitoring Status IRD Live</h2>
     
-
     <div class="row pt-4 gx-4 gy-4">
       <div class="col-md-4">
         <div class="card crop-img">
-          <i class="fas fa-tv fa-3x"></i>
+          {{-- <i class="fas fa-tv fa-3x"></i> --}}
           <div class="card-body">
-            <h5 class="card-title">Total Channel</h5>
-            <p class="card-text">{{ $chn }} Channel</p>
+            <h5 class="card-title">IRD Live 1</h5>
+            <table class="table table-stripe">
+              <thead>
+                <tr>
+                  <th>Status : Locked/unlocked </th>
+                </tr>
+
+                <tr>
+                  <td align="left">Service ID : 1-Usee Sport </td>
+                </tr>
+
+                <tr>
+                  <td align="left">Video Bitrate : </td>
+                </tr>
+                
+                <tr>
+                  <td align="left">Kualitas : </td>
+                </tr>
+
+                <tr>
+                  <td align="left">Margin : </td>
+                </tr>
+              </thead>
+            </table>
           </div>
         </div>
       </div>
+
       <div class="col-md-4">
+        <div class="card crop-img">
+          {{-- <i class="fas fa-tv fa-3x"></i> --}}
+          <div class="card-body">
+            <h5 class="card-title">IRD Live 2</h5>
+            <table class="table table-stripe">
+              <thead>
+                <tr>
+                  <th>Status : Locked/unlocked </th>
+                </tr>
+
+                <tr>
+                  <td align="left">Service ID : 1-Usee Sport </td>
+                </tr>
+
+                <tr>
+                  <td align="left">Video Bitrate : </td>
+                </tr>
+                
+                <tr>
+                  <td align="left">Kualitas : </td>
+                </tr>
+
+                <tr>
+                  <td align="left">Margin : </td>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card crop-img">
+          {{-- <i class="fas fa-tv fa-3x"></i> --}}
+          <div class="card-body">
+            <h5 class="card-title">IRD Live 3</h5>
+            <table class="table table-stripe">
+              <thead>
+                <tr>
+                  <th>Status : Locked/unlocked </th>
+                </tr>
+
+                <tr>
+                  <td align="left">Service ID : 1-Usee Sport </td>
+                </tr>
+
+                <tr>
+                  <td align="left">Video Bitrate : </td>
+                </tr>
+                
+                <tr>
+                  <td align="left">Kualitas : </td>
+                </tr>
+
+                <tr>
+                  <td align="left">Margin : </td>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div> <br>
+
+      {{-- <div class="col-md-4">
         <div class="card crop-img">
           <i class="fas fa-tv fa-3x"></i>
           <div class="card-body">
@@ -30,8 +116,9 @@
             <p class="card-text">{{ $hd }} Channel</p>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
+      </div> --}}
+
+      {{-- <div class="col-md-4">
         <div class="card crop-img">
           <i class="fas fa-tv fa-3x"></i>
           <div class="card-body">
@@ -39,21 +126,117 @@
             <p class="card-text">{{ $sd }} Channel</p>
           </div>
         </div>
-      </div>
+      </div> --}}
     </div>
 
+    <div class="row pt-4 gx-4 gy-4">
+      <div class="col-md-4">
+        <div class="card crop-img">
+          {{-- <i class="fas fa-tv fa-3x"></i> --}}
+          <div class="card-body">
+            <h5 class="card-title">IRD Live 4</h5>
+            <table class="table table-stripe">
+              <thead>
+                <tr>
+                  <th>Status : Locked/unlocked </th>
+                </tr>
+
+                <tr>
+                  <td align="left">Service ID : 1-Usee Sport </td>
+                </tr>
+
+                <tr>
+                  <td align="left">Video Bitrate : </td>
+                </tr>
+                
+                <tr>
+                  <td align="left">Kualitas : </td>
+                </tr>
+
+                <tr>
+                  <td align="left">Margin : </td>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card crop-img">
+          {{-- <i class="fas fa-tv fa-3x"></i> --}}
+          <div class="card-body">
+            <h5 class="card-title">IRD Live 5</h5>
+            <table class="table table-stripe">
+              <thead>
+                <tr>
+                  <th>Status : Locked/unlocked </th>
+                </tr>
+
+                <tr>
+                  <td align="left">Service ID : 1-Usee Sport </td>
+                </tr>
+
+                <tr>
+                  <td align="left">Video Bitrate : </td>
+                </tr>
+                
+                <tr>
+                  <td align="left">Kualitas : </td>
+                </tr>
+
+                <tr>
+                  <td align="left">Margin : </td>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card crop-img">
+          {{-- <i class="fas fa-tv fa-3x"></i> --}}
+          <div class="card-body">
+            <h5 class="card-title">IRD Live 6</h5>
+            <table class="table table-stripe">
+              <thead>
+                <tr>
+                  <th>Status : Locked/unlocked </th>
+                </tr>
+
+                <tr>
+                  <td align="left">Service ID : 1-Usee Sport </td>
+                </tr>
+
+                <tr>
+                  <td align="left">Video Bitrate : </td>
+                </tr>
+                
+                <tr>
+                  <td align="left">Kualitas : </td>
+                </tr>
+
+                <tr>
+                  <td align="left">Margin : </td>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    
     <div class="col-md-3 mx-auto text-center pt-3">
-      <a href="/channel">
+      <a href=#>
         <button type="button" class="btn btn-danger btn-lg">Lihat Detail</button>
       </a>
     </div>
-  </div>
+  
 </div>
 <!-- total channel -->
 <div class="container-fluid pt-5 pb-5 bg-light">
   <div class="container text-center">
-    <h2 class="display-3" id="channel">Total Channel UseeTV</h2>
-    <p>Hallo</p>
+    <h2 class="display-6" id="channel">Total Channel UseeTV</h2>
 
     <div class="row pt-4 gx-4 gy-4">
       <div class="col-md-4">
@@ -90,13 +273,13 @@
         <button type="button" class="btn btn-danger btn-lg">Lihat Detail</button>
       </a>
     </div>
-  </div>
+  
 </div>
 
 <!-- alpro -->
 <div class="container-fluid pt-5 pb-5 bg-light">
   <div class="container text-center">
-    <h2 class="display-3" id="alpro">Total Perangkat Headend</h2>
+    <h2 class="display-6" id="alpro">Total Perangkat Headend</h2>
 
     <div class="row pt-4 gx-4 gy-4">
       <div class="col-md-4">
