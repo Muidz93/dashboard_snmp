@@ -1,0 +1,47 @@
+.banner {
+    background-color:black;
+    background-size: cover;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    color:white;
+}
+
+.crop-img{
+    object-fit: cover;
+}
+
+.tim img{
+    width: 150px;
+    border: 10px solid #cccccc;
+}
+
+a.social{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    color: black;
+    
+}
+
+  
+  
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
+  
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .form-registration input{
+    border-radius: 0;
+    margin-bottom: -1px;
+  }
