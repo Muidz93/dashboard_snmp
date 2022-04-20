@@ -24,7 +24,7 @@
                 </tr>
 
                 <tr>
-                  <td align="left">Service ID : 1-Usee Sport </td>
+                  <td align="left">Service ID : 1- </td>
                 </tr>
 
                 <tr>
@@ -56,7 +56,7 @@
                 </tr>
 
                 <tr>
-                  <td align="left">Service ID : 1-Usee Sport </td>
+                  <td align="left">Service ID : 1- </td>
                 </tr>
 
                 <tr>
@@ -88,7 +88,7 @@
                 </tr>
 
                 <tr>
-                  <td align="left">Service ID : 1-Usee Sport </td>
+                  <td align="left">Service ID : 1- </td>
                 </tr>
 
                 <tr>

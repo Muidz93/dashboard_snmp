@@ -39,7 +39,9 @@
                         <th>Name</th>
                         <th>Merk</th>
                         <th>IP Control</th>
-                        <th>Status</th>
+                        <th>Satelit Status</th>
+                        <th>IP Input Status</th>
+                        <th>TS Status</th>
                         <th>Margin</th>
                         <th>Service</th>
                         <th>Video Bitrate</th>
