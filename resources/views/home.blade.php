@@ -227,7 +227,7 @@
       </div>
     
     <div class="col-md-3 mx-auto text-center pt-3">
-      <a href=#>
+      <a href="/dashboard">
         <button type="button" class="btn btn-danger btn-lg">Lihat Detail</button>
       </a>
     </div>

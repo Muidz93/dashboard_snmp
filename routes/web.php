@@ -28,6 +28,7 @@ use App\Http\Controllers\registerController;
 
 Route::get('/list_ird', [irdController::class,'readData'])->middleware('auth');
 Route::get('/channel', [chnController::class, 'readData'])->middleware('auth');
+Route::get('/dashboard', [DashboardController::class, 'readData'])->middleware('auth');
 
 Route::get('/login', [loginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [loginController::class, 'authenticate']);
