@@ -23,7 +23,10 @@ a.social{
     
 }
 
-  
+  .kartu{
+    border-radius: 5px;
+    box-shadow: 1px 20px 30px #ccc;
+  }
   
   .form-signin .form-floating:focus-within {
     z-index: 2;
