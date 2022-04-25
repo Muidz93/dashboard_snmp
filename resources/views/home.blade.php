@@ -28,7 +28,7 @@
                 </tr>
 
                 <tr>
-                  <td align="left">Video Bitrate : </td>
+                  <td align="left">Video Bitrate : bits/s</td>
                 </tr>
                 
                 <tr>
