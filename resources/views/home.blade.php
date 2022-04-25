@@ -67,7 +67,7 @@
                   <td align="left">Video Status : <span id="cekstatus2"></span></td>
                 </tr>
                 <tr>
-                  <td align="left">Video Bitrate : <span id="cekbitrate2"></span></td>
+                  <td align="left">Video Bitrate : <span id="cekbitrate2"></span> bits/s</td>
                 </tr>
                 
                 <tr>
