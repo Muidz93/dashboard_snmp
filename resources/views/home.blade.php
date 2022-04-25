@@ -7,13 +7,13 @@
 </div>
 
 <!-- Monit IRD -->
-<div class="container-fluid pt-5 pb-5 bg-light">
+<div class="pt-5 pb-5 bg-light">
   <div class="container text-center">
     <h2 class="display-6" id="#">Monitoring Status IRD Live</h2>
     
-    <div class="row pt-4 gx-4 gy-4">
-      <div class="col-md-4 kartu">
-        <div class="card crop-img">
+    <div class="row pt-4">
+      <div class=" kartu ">
+        <div class="">
           {{-- <i class="fas fa-tv fa-3x"></i> --}}
           <div class="card-body">
             <h5 class="card-title">IRD Live 1</h5>
@@ -41,7 +41,7 @@
               </thead>
             </table>
             <div class=" mx-auto">
-              <a href="#">
+              <a href="http://192.168.112.2" target="__blank">
                 <button type="button" class="btn btn-primary">Lihat IRD</button>
               </a>
             </div>
@@ -49,36 +49,38 @@
         </div>
       </div>
 
-      <div class="col-md-4 kartu">
-        <div class="card crop-img">
+      <div class=" kartu ">
+        <div class="">
           {{-- <i class="fas fa-tv fa-3x"></i> --}}
           <div class="card-body">
             <h5 class="card-title">IRD Live 2</h5>
             <table class="table table-stripe">
               <thead>
                 <tr>
-                  <th>Status : Locked/unlocked </th>
+                  <th>Status : <span id="cekstatusSat2"></span> </th>
                 </tr>
 
                 <tr>
-                  <td align="left">Service ID : 1- </td>
+                  <td align="left">Service ID : <span id="cekservice2"></span></td>
                 </tr>
-
                 <tr>
-                  <td align="left">Video Bitrate : </td>
+                  <td align="left">Video Status : <span id="cekstatus2"></span></td>
+                </tr>
+                <tr>
+                  <td align="left">Video Bitrate : <span id="cekbitrate2"></span></td>
                 </tr>
                 
                 <tr>
-                  <td align="left">Kualitas : </td>
+                  <td align="left">Kualitas : <span id="cekkualitas2"></span></td>
                 </tr>
 
                 <tr>
-                  <td align="left">Margin : </td>
+                  <td align="left">Margin : <span id="cekmargin2"></span></td>
                 </tr>
               </thead>
             </table>
             <div class=" mx-auto">
-              <a href="#">
+              <a href="http://192.168.112.3" target="__blank">
                 <button type="button" class="btn btn-primary">Lihat IRD</button>
               </a>
             </div>
@@ -86,8 +88,8 @@
         </div>
       </div>
 
-      <div class="col-md-4 kartu">
-        <div class="card crop-img">
+      <div class=" kartu ">
+        <div class="">
           {{-- <i class="fas fa-tv fa-3x"></i> --}}
           <div class="card-body">
             <h5 class="card-title">IRD Live 3</h5>
@@ -115,7 +117,7 @@
               </thead>
             </table>
             <div class=" mx-auto">
-              <a href="#">
+              <a href="http://192.168.112.4" target="__blank">
                 <button type="button" class="btn btn-primary">Lihat IRD</button>
               </a>
             </div>
@@ -123,8 +125,8 @@
         </div>
       </div> <br>
 
-      {{-- <div class="col-md-4 kartu">
-        <div class="card crop-img">
+      {{-- <div class=" kartu  ">
+        <div class="">
           <i class="fas fa-tv fa-3x"></i>
           <div class="card-body">
             <h5 class="card-title">Total Channel HD</h5>
@@ -133,8 +135,8 @@
         </div>
       </div> --}}
 
-      {{-- <div class="col-md-4 kartu">
-        <div class="card crop-img">
+      {{-- <div class=" kartu  ">
+        <div class="">
           <i class="fas fa-tv fa-3x"></i>
           <div class="card-body">
             <h5 class="card-title">Total Channel SD</h5>
@@ -145,8 +147,8 @@
     </div>
 
     <div class="row pt-4 gx-4 gy-4">
-      <div class="col-md-4 kartu">
-        <div class="card crop-img">
+      <div class=" kartu ">
+        <div class="">
           {{-- <i class="fas fa-tv fa-3x"></i> --}}
           <div class="card-body">
             <h5 class="card-title">IRD Live 4</h5>
@@ -174,7 +176,7 @@
               </thead>
             </table>
             <div class=" mx-auto">
-              <a href="#">
+              <a href="http://192.168.112.5" target="__blank">
                 <button type="button" class="btn btn-primary">Lihat IRD</button>
               </a>
             </div>
@@ -182,8 +184,8 @@
         </div>
       </div>
 
-      <div class="col-md-4 kartu">
-        <div class="card crop-img">
+      <div class=" kartu ">
+        <div class="">
           {{-- <i class="fas fa-tv fa-3x"></i> --}}
           <div class="card-body">
             <h5 class="card-title">IRD Live 5</h5>
@@ -211,7 +213,7 @@
               </thead>
             </table>
             <div class=" mx-auto">
-              <a href="#">
+              <a href="http://192.168.112.6" target="__blank">
                 <button type="button" class="btn btn-primary">Lihat IRD</button>
               </a>
             </div>
@@ -219,8 +221,8 @@
         </div>
       </div>
 
-      <div class="col-md-4 kartu">
-        <div class="card crop-img">
+      <div class=" kartu ">
+        <div class="">
           {{-- <i class="fas fa-tv fa-3x"></i> --}}
           <div class="card-body">
             <h5 class="card-title">IRD Live 6</h5>
@@ -248,20 +250,21 @@
               </thead>
             </table>
             <div class=" mx-auto">
-              <a href="#">
+              <a href="http://192.168.112.7" target="__blank">
                 <button type="button" class="btn btn-primary">Lihat IRD</button>
               </a>
             </div>
           </div>
         </div>
       </div>
+    </div>
     <hr>
-    {{-- <div class="col-md-3 mx-auto text-center pt-3">
+    {{-- <div class=" mx-auto text-center pt-3">
       <a href="/dashboard">
         <button type="button" class="btn btn-danger btn-lg">Lihat Detail</button>
       </a>
     </div> --}}
-  
+  </div>
 </div>
 <!-- total channel -->
 <div class="container-fluid pt-5 pb-5 bg-light">
@@ -460,5 +463,18 @@
 </div> --}}
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+            setInterval(function() {
+              $("#cekmargin2").load("snmp/ird2/margin.php").text();
+              $("#cekservice2").load("snmp/ird2/service.php").text();
+              $("#cekkualitas2").load("snmp/ird2/kualitas.php").text();
+              $("#cekbitrate2").load("snmp/ird2/bitrate.php").text();
+              $("#cekstatusSat2").load("snmp/ird2/statusSat.php").text();
+              $("#cekstatus2").load("snmp/ird2/statusVid.php").text();
+            }, 1000);
+        });
 </script>
 @include('footer')

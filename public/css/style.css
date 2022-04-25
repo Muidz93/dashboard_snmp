@@ -25,7 +25,9 @@ a.social{
 
   .kartu{
     border-radius: 5px;
-    box-shadow: 1px 20px 30px #ccc;
+    box-shadow: 1px 20px 10px #ccc;
+    width: 300px;
+    margin: 3%;
   }
   
   .form-signin .form-floating:focus-within {
