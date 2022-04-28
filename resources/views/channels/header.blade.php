@@ -16,7 +16,7 @@
         crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
 
@@ -33,7 +33,7 @@
           <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="/channel">Channel</a>
+                <a class="nav-link" href="/channels">Channels</a>
               </li>   
            
               </li>

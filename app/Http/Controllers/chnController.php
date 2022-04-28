@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\channel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Routing\Controller;
+use App\Models\channel;
 use Illuminate\Validation\Rules\Unique;
 
 class chnController extends Controller
@@ -15,10 +15,9 @@ class chnController extends Controller
         return view('channel',compact('channels')); 
     }
 
-    public function index()
+    public function input()
     {
-        $chn = new channel;
-        return view('channels.input_chn', compact('chn'), [
+        return view('channels.input_chn', [
             'title'=>'Input Channel'
         ]);
     }
@@ -55,5 +54,37 @@ class chnController extends Controller
         $chn -> save($validatedData);
 
         return redirect('channel');
+    }
+    public function hapus($id)
+    {
+        $channel=channel::find($id);
+         if ($channel === null) {
+            return redirect('/')->with('bandel', 'id tidak di temukan');
+        }
+        $channel->delete();
+        return redirect()->back();
+    }
+    public function edit($id)
+    {
+        $channel=channel::find($id);
+        return view('channels.edit',compact('channel'));
+    }
+    public function postEdit($id,Request $request)
+    {
+        $chn = channel::find($id);
+        $chn->nmr = $request->nmr;
+        $chn->nama_chn = $request->nama_chn;
+        $chn->kualitas = $request->kualitas;
+        $chn->downlink = $request->downlink;
+        $chn->source = $request->source;
+        $chn->freq = $request->freq;
+        $chn->pol = $request->pol;
+        $chn->sr = $request->sr;
+        $chn->metro = $request->metro;
+        $chn->multicast = $request->multicast;
+        $chn->port = $request->port;
+        $chn->update();
+        return redirect('/channels')->with('berhasil','berhasil ubah data');
+        // return $chn;
     }
 }

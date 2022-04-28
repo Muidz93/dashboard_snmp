@@ -20,23 +20,24 @@
             <table class="table table-stripe">
               <thead>
                 <tr>
-                  <th>Status : Locked/unlocked </th>
+                  <th>Status : <span id="cekstatusSat1"></span> </th>
                 </tr>
-
                 <tr>
-                  <td align="left">Service ID : 1- </td>
+                  <td align="left">Service ID : <span id="cekservice1"></span></td>
                 </tr>
-
                 <tr>
-                  <td align="left">Video Bitrate : bits/s</td>
+                  <td align="left">Video Status : <span id="cekstatus1"></span></td>
+                </tr>
+                <tr>
+                  <td align="left">Video Bitrate : <span id="cekbitrate1"></span> bits/s</td>
                 </tr>
                 
                 <tr>
-                  <td align="left">Kualitas : </td>
+                  <td align="left">Kualitas : <span id="cekkualitas1"></span></td>
                 </tr>
 
                 <tr>
-                  <td align="left">Margin : </td>
+                  <td align="left">Margin : <span id="cekmargin1"></span></td>
                 </tr>
               </thead>
             </table>
@@ -80,7 +81,7 @@
               </thead>
             </table>
             <div class=" mx-auto">
-              <a href="http://192.168.112.3" target="__blank">
+              <a href="/dashboard" target="__blank">
                 <button type="button" class="btn btn-primary">Lihat IRD</button>
               </a>
             </div>
@@ -96,23 +97,24 @@
             <table class="table table-stripe">
               <thead>
                 <tr>
-                  <th>Status : Locked/unlocked </th>
+                  <th>Status : <span id="cekstatusSat3"></span> </th>
                 </tr>
-
                 <tr>
-                  <td align="left">Service ID : 1- </td>
+                  <td align="left">Service ID : <span id="cekservice3"></span></td>
                 </tr>
-
                 <tr>
-                  <td align="left">Video Bitrate : </td>
+                  <td align="left">Video Status : <span id="cekstatus3"></span></td>
+                </tr>
+                <tr>
+                  <td align="left">Video Bitrate : <span id="cekbitrate3"></span> bits/s</td>
                 </tr>
                 
                 <tr>
-                  <td align="left">Kualitas : </td>
+                  <td align="left">Kualitas : <span id="cekkualitas3"></span></td>
                 </tr>
 
                 <tr>
-                  <td align="left">Margin : </td>
+                  <td align="left">Margin : <span id="cekmargin3"></span></td>
                 </tr>
               </thead>
             </table>
@@ -154,24 +156,28 @@
             <h5 class="card-title">IRD Live 4</h5>
             <table class="table table-stripe">
               <thead>
-                <tr>
-                  <th>Status : Locked/unlocked </th>
+                 <tr>
+                  <th>Sat Status : <span id="cekstatusSat4"></span> </th>
                 </tr>
-
                 <tr>
-                  <td align="left">Service ID : 1-Usee Sport </td>
+                  <th>Ip input Status : <span id="cekstatusIp4"></span> </th>
                 </tr>
-
                 <tr>
-                  <td align="left">Video Bitrate : </td>
+                  <td align="left">Service ID : <span id="cekservice4"></span></td>
+                </tr>
+                <tr>
+                  <td align="left">Video Status : <span id="cekstatus4"></span></td>
+                </tr>
+                <tr>
+                  <td align="left">Video Bitrate : <span id="cekbitrate4"></span> bits/s</td>
                 </tr>
                 
                 <tr>
-                  <td align="left">Kualitas : </td>
+                  <td align="left">Kualitas : <span id="cekkualitas4"></span></td>
                 </tr>
 
                 <tr>
-                  <td align="left">Margin : </td>
+                  <td align="left">Margin : <span id="cekmargin4"></span></td>
                 </tr>
               </thead>
             </table>
@@ -191,24 +197,25 @@
             <h5 class="card-title">IRD Live 5</h5>
             <table class="table table-stripe">
               <thead>
-                <tr>
-                  <th>Status : Locked/unlocked </th>
+                 <tr>
+                  <th>Status : <span id="cekstatusSat5"></span> </th>
                 </tr>
-
                 <tr>
-                  <td align="left">Service ID : 1-Usee Sport </td>
+                  <td align="left">Service ID : <span id="cekservice5"></span></td>
                 </tr>
-
                 <tr>
-                  <td align="left">Video Bitrate : </td>
+                  <td align="left">Video Status : <span id="cekstatus5"></span></td>
+                </tr>
+                <tr>
+                  <td align="left">Video Bitrate : <span id="cekbitrate5"></span> bits/s</td>
                 </tr>
                 
                 <tr>
-                  <td align="left">Kualitas : </td>
+                  <td align="left">Kualitas : <span id="cekkualitas5"></span></td>
                 </tr>
 
                 <tr>
-                  <td align="left">Margin : </td>
+                  <td align="left">Margin : <span id="cekmargin5"></span></td>
                 </tr>
               </thead>
             </table>
@@ -228,24 +235,25 @@
             <h5 class="card-title">IRD Live 6</h5>
             <table class="table table-stripe">
               <thead>
-                <tr>
-                  <th>Status : Locked/unlocked </th>
+                 <tr>
+                  <th>Status : <span id="cekstatusSat6"></span> </th>
                 </tr>
-
                 <tr>
-                  <td align="left">Service ID : 1-Usee Sport </td>
+                  <td align="left">Service ID : <span id="cekservice6"></span></td>
                 </tr>
-
                 <tr>
-                  <td align="left">Video Bitrate : </td>
+                  <td align="left">Video Status : <span id="cekstatus6"></span></td>
+                </tr>
+                <tr>
+                  <td align="left">Video Bitrate : <span id="cekbitrate6"></span> bits/s</td>
                 </tr>
                 
                 <tr>
-                  <td align="left">Kualitas : </td>
+                  <td align="left">Kualitas : <span id="cekkualitas6"></span></td>
                 </tr>
 
                 <tr>
-                  <td align="left">Margin : </td>
+                  <td align="left">Margin : <span id="cekmargin6"></span></td>
                 </tr>
               </thead>
             </table>
@@ -302,7 +310,7 @@
     </div>
 
     <div class="col-md-3 mx-auto text-center pt-3">
-      <a href="/channel">
+      <a href="/channels">
         <button type="button" class="btn btn-danger btn-lg">Lihat Detail</button>
       </a>
     </div>
@@ -462,19 +470,5 @@
   </div>
 </div> --}}
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-</script>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() {
-            setInterval(function() {
-              $("#cekmargin2").load("snmp/ird2/margin.php").text();
-              $("#cekservice2").load("snmp/ird2/service.php").text();
-              $("#cekkualitas2").load("snmp/ird2/kualitas.php").text();
-              $("#cekbitrate2").load("snmp/ird2/bitrate.php").text();
-              $("#cekstatusSat2").load("snmp/ird2/statusSat.php").text();
-              $("#cekstatus2").load("snmp/ird2/statusVid.php").text();
-            }, 1000);
-        });
-</script>
+
 @include('footer')

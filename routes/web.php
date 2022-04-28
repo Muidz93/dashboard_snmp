@@ -25,26 +25,39 @@ use App\Http\Controllers\registerController;
 // Route::get('/', function () {
 //     return view('/login');
 // });
+route::group(['middleware' => ['auth']], function () {
+    Route::get('/list_ird', [irdController::class,'readData']);
+    Route::get('/channels', [chnController::class, 'readData']);
+    Route::get('/dashboard', [DashboardController::class, 'readData']);
 
-Route::get('/list_ird', [irdController::class,'readData'])->middleware('auth');
-Route::get('/channel', [chnController::class, 'readData'])->middleware('auth');
-Route::get('/dashboard', [DashboardController::class, 'readData'])->middleware('auth');
+    Route::get('/input', [irdController::class,'index']);
+    Route::post('/input', [irdController::class,'store']);
 
-Route::get('/login', [loginController::class, 'index'])->name('login')->middleware('guest');
+    Route::get('/', [irdController::class,'hitung']);
+
+    Route::get('/channel', [chnController::class, 'input']);
+    Route::get('/channel/hapus/{id}', [chnController::class, 'hapus']);
+    Route::get('/channel/edit/{id}', [chnController::class, 'edit']);
+    Route::post('/channel/edit/{id}', [chnController::class, 'postEdit']);
+    Route::post('/channel', [chnController::class, 'store']);
+});
 Route::post('/login', [loginController::class, 'authenticate']);
 Route::post('/logout', [loginController::class, 'logout']);
- 
-
-Route::get('/register', [registerController::class, 'index'])->middleware('guest');
 Route::post('/register', [registerController::class, 'store']);
 
-Route::get('/input', [irdController::class,'index'])->middleware('auth');
-Route::post('/input', [irdController::class,'store']);
+route::group(['middleware' => ['guest']], function () {
+    Route::get('/login', [loginController::class, 'index'])->name('login');
+    Route::get('/register', [registerController::class, 'index']);
+});
 
-Route::get('/', [irdController::class,'hitung'])->middleware('auth');
 
-Route::get('/channels', [chnController::class, 'index'])->middleware('auth');
-Route::post('/channels', [chnController::class, 'store']);
+
+
+
+
+
+
+
 
 // Route::get('/dashboard', [DashboardController::class,'index']);
 

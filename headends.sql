@@ -75,6 +75,7 @@ CREATE TABLE `failed_jobs` (
 --
 
 CREATE TABLE `irds` (
+  `id` bigint(20) UNSIGNED NOT NULL,
   `sn` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `merk` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -89,13 +90,13 @@ CREATE TABLE `irds` (
 -- Dumping data for table `irds`
 --
 
-INSERT INTO `irds` (`sn`, `merk`, `type`, `owner`, `control`, `created_at`, `updated_at`, `channel`) VALUES
-('111111A', 'Harmonic', 'PVR8100', 'Telkom', '10.10.5.1', '2022-02-01 00:19:22', '2022-02-01 00:19:22', 'Bein Sport 1'),
-('7777771', 'Harmonic', 'PVR8100', 'Telkom', '10.10.5.2', '2022-02-01 00:19:50', '2022-02-01 00:19:50', 'Bein Sport 2'),
-('54321', 'Ericsson', 'AVP3000', 'Telkom', '10.10.5.3', '2022-02-02 08:55:45', '2022-02-02 08:55:45', 'SCTV'),
-('8881', 'Dypsys', 'Dypsys', 'Magna', '10.10.5.4', '2022-02-02 09:40:51', '2022-02-02 09:40:51', 'Prambors'),
-('BALUVGV', 'Cisco', 'DX8937', 'Telkom', '10.10.5.5', '2022-02-02 09:41:26', '2022-02-02 09:41:26', 'Trans 7'),
-('MI1520A0046', 'Motorolla', 'M63737', 'Ekajaya', '10.10.5.6', '2022-02-02 09:41:59', '2022-02-02 09:41:59', 'Trans TV');
+INSERT INTO `irds` (`id`,`sn`, `merk`, `type`, `owner`, `control`, `created_at`, `updated_at`, `channel`) VALUES
+(1,'111111A', 'Harmonic', 'PVR8100', 'Telkom', '10.10.5.1', '2022-02-01 00:19:22', '2022-02-01 00:19:22', 'Bein Sport 1'),
+(2,'7777771', 'Harmonic', 'PVR8100', 'Telkom', '10.10.5.2', '2022-02-01 00:19:50', '2022-02-01 00:19:50', 'Bein Sport 2'),
+(3,'54321', 'Ericsson', 'AVP3000', 'Telkom', '10.10.5.3', '2022-02-02 08:55:45', '2022-02-02 08:55:45', 'SCTV'),
+(4,'8881', 'Dypsys', 'Dypsys', 'Magna', '10.10.5.4', '2022-02-02 09:40:51', '2022-02-02 09:40:51', 'Prambors'),
+(5,'BALUVGV', 'Cisco', 'DX8937', 'Telkom', '10.10.5.5', '2022-02-02 09:41:26', '2022-02-02 09:41:26', 'Trans 7'),
+(6,'MI1520A0046', 'Motorolla', 'M63737', 'Ekajaya', '10.10.5.6', '2022-02-02 09:41:59', '2022-02-02 09:41:59', 'Trans TV');
 
 -- --------------------------------------------------------
 

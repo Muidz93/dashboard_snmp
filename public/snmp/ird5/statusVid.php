@@ -1,5 +1,5 @@
 <?php 
-$statusVid = snmp2_get("192.168.112.3", "public",'.1.3.6.1.4.1.1773.1.3.208.3.3.3.0');
+$statusVid = snmp2_get("192.168.112.6", "public",'.1.3.6.1.4.1.1773.1.3.208.3.3.3.0');
 // echo $statusVid;
 $statusVid = preg_replace('/"/', '', $statusVid);
 $statusVid=str_replace("INTEGER: ","",$statusVid);

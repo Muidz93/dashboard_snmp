@@ -10,15 +10,15 @@
 <!-- Data Channel -->
 <div class="container-fluid pt-5 pb-5 bg-light">
     <div class="container">
-        <a href="/channels">
+        <a href="/channel">
             <span class="badge bg-success">Tambah Data +</span>
         </a>
 
     </div>
 
     <div class="container text-center">
-        <div class="row pt-4 gx-4 gy-4">
-            <table class="table table-stripe">
+        <div class="row pt-4 gx-4 gy-4 table-responsive">
+            <table class="table table-stripe ">
                 <thead>
                     <tr>
                         <th class="col-1">No</th>
@@ -55,8 +55,8 @@
                             <td align="center">{{ $cn->multicast }}</td>
                             <td align="center">{{ $cn->port }}</td>
                             <td>
-                                <a href="#"><span class="badge bg-warning text-dark">Edit</span></a>
-                                <span class="badge bg-danger">Delete</span>
+                                <a href="/channel/edit/{{$cn->id}}"><span class="badge bg-warning text-dark">Edit</span></a>
+                                <a href="/channel/hapus/{{$cn->id}}" onclick="return confirm('yakin ingin hapus? ')"><span class="badge bg-danger">Delete</span></a>
                             </td>
                             
                         </tr>
@@ -65,8 +65,7 @@
             </table>
         </div>
     </div>
+</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-</script>
 
 @include('footer')

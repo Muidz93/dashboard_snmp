@@ -31,7 +31,7 @@
 
 
     <div class="container text-center">
-        <div class="row pt-4 gx-4 gy-4">
+        <div class="row pt-4 gx-4 gy-4 table-responsive">
             <table class="table table-stripe">
                 <thead>
                     <tr>

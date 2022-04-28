@@ -14,6 +14,7 @@ class CreateIrdsTable extends Migration
     public function up()
     {
         Schema::create('irds', function (Blueprint $table) {
+            $table->id();
             $table->string('sn');
             $table->string('merk');
             $table->string('type');

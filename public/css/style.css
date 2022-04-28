@@ -9,7 +9,10 @@
 .crop-img{
     object-fit: cover;
 }
-
+.tengah{
+  display: flex;
+  justify-content: center;
+}
 .tim img{
     width: 150px;
     border: 10px solid #cccccc;

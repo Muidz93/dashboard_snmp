@@ -16,7 +16,8 @@
         crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
 </head>
 <body>
 
