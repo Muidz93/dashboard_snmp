@@ -24,6 +24,7 @@
               $("#cekbitrate3").load("snmp/ird3/bitrate.php").text();
               $("#cekstatusSat3").load("snmp/ird3/statusSat.php").text();
               $("#cekstatus3").load("snmp/ird3/statusVid.php").text();
+              $("#cekstatusIp3").load("snmp/ird3/statusIp.php").text();
               // =================================================
               $("#cekmargin4").load("snmp/ird4/margin.php").text();
               $("#cekservice4").load("snmp/ird4/service.php").text();

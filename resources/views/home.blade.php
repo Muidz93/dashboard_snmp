@@ -100,6 +100,9 @@
                   <th>Status : <span id="cekstatusSat3"></span> </th>
                 </tr>
                 <tr>
+                  <th>Ip input Status : <span id="cekstatusIp3"></span> </th>
+                </tr>
+                <tr>
                   <td align="left">Service ID : <span id="cekservice3"></span></td>
                 </tr>
                 <tr>
