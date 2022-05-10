@@ -236,6 +236,12 @@ ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `irds`
+--
+ALTER TABLE `irds`
+  ADD PRIMARY KEY (`id`);
+  
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`

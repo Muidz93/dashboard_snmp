@@ -1,6 +1,6 @@
 @include('channels.header')
 
-<div class="row justify-content-left">
+<div class="tengah">
     <div class="col-lg-7">
         <div class="container mt-5 pt-5 pb-5 ">
             <main class="form-input">
@@ -9,7 +9,7 @@
                   <h1 class="h3 mb-3 fw-normal text-center">Input Channel</h1>
                   <div class="form-floating">
                     <input type="text" 
-                        name="nmr" 
+                        name="nmr"
                         class="form-control rounded-top @error('nmr') is-invalid @enderror" 
                         id="nmr" 
                         placeholder="Nomor Channel" required value="{{ old('nmr') }}">

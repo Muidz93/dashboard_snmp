@@ -47,6 +47,8 @@
               $("#cekbitrate6").load("snmp/ird6/bitrate.php").text();
               $("#cekstatusSat6").load("snmp/ird6/statusSat.php").text();
               $("#cekstatus6").load("snmp/ird6/statusVid.php").text();
+              // =================================================
+              $("#test").load("snmp/ird.php").text();
             }, 1000);
         });
 </script>

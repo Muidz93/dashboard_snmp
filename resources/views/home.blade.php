@@ -10,7 +10,7 @@
 <div class="pt-5 pb-5 bg-light">
   <div class="container text-center">
     <h2 class="display-6" id="#">Monitoring Status IRD Live</h2>
-    
+    <p id="test" hidden></p>
     <div class="row pt-4">
       <div class=" kartu ">
         <div class="">
@@ -317,7 +317,7 @@
         <button type="button" class="btn btn-danger btn-lg">Lihat Detail</button>
       </a>
     </div>
-  
+  </div>
 </div>
 
 <!-- alpro -->

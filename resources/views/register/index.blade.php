@@ -1,6 +1,6 @@
 @include('header')
 
-<div class="row justify-content-center">
+<div class="tengah">
     <div class="col-lg-5">
         <div class="container mt-5 pt-5 pb-5 bg-light">
             <main class="form-registration">
