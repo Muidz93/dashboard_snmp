@@ -66,7 +66,10 @@ for ($id=1; $id <= $data; $id++) {
         $statusVid = "Video Stopped";
         }else if ($statusVid == 2){
         $statusVid = "Video Error";
+        }else if ($statusVid == 3){
+        $statusVid = "Unlicensed";
         }
+
         mysqli_query($koneksi, "UPDATE snmps SET video_bitrate='$bitrate', kualitas='$kualitas',status_sat='$status_sat',margin='$margin',status_ip='$status_ip',service='$service',status_video='$statusVid' WHERE ID = $id");
         // echo "berhasil";
 }

@@ -12,5 +12,7 @@ if ($statusVid == 0){
     echo "Video Stopped";
 }else if ($statusVid == 2){
     echo "Video Error";
+}else if ($statusVid == 3){
+    echo "Unlicensed";
 }
 ?>
