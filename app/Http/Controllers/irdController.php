@@ -7,7 +7,7 @@ use App\Models\ird;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
-
+use GuzzleHttp\Client;
 
 class irdController extends Controller
 {
@@ -70,7 +70,16 @@ class irdController extends Controller
         $hd = channel::where('kualitas', 'HD')->count();
         $sd = channel::where('kualitas', 'SD')->count();
         
-        return view('home',compact('hd','hitung', 'harmonic','sd','chn','ericsson'));
+        $client = new Client(); 
+        $url = "http://localhost:8080/api/ird";
+
+
+        $response = $client->request('GET', $url, [
+            'verify'  => false,
+        ]);
+
+        $responseBody = json_decode($response->getBody());
+        return view('home',compact('hd','hitung', 'harmonic','sd','chn','ericsson','responseBody'));
     }
 
     // public function hd()

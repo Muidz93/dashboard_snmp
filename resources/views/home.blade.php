@@ -269,6 +269,45 @@
         </div>
       </div>
     </div>
+    @foreach ($responseBody as $rsp)
+    <?php $no=1 ?>
+    <div class=" kartu ">
+        <div class="">
+          {{-- <i class="fas fa-tv fa-3x"></i> --}}
+          <div class="card-body">
+            <h5 class="card-title">IRD Test</h5>
+            <table class="table table-stripe">
+              <thead>
+                <tr>
+                  <th>Status : <span id="cekstatusSat"></span> </th>
+                </tr>
+                <tr>
+                  <td align="left">Service ID : <span id="cekservice"></span></td>
+                </tr>
+                <tr>
+                  <td align="left">Video Status : <span id="cekstatus"></span></td>
+                </tr>
+                <tr>
+                  <td align="left">Video Bitrate : <span id="cekbitrate"></span> bits/s</td>
+                </tr>
+                <tr>
+                  <td align="left">Kualitas : <span id="cekkualitas"></span></td>
+                </tr>
+                <tr>
+                  <td align="left">Margin : <span id="cekmarginn">{{$rsp->margin}}</span></td>
+                </tr>
+              </thead>
+            </table>
+            <div class=" mx-auto">
+              <a href="http://192.168.112.2" target="__blank">
+                <button type="button" class="btn btn-primary">Lihat IRD</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <?php $no ?>
+      @endforeach
     <hr>
     {{-- <div class=" mx-auto text-center pt-3">
       <a href="/dashboard">

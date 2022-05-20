@@ -48,10 +48,21 @@
               $("#cekstatusSat6").load("snmp/ird6/statusSat.php").text();
               $("#cekstatus6").load("snmp/ird6/statusVid.php").text();
               // =================================================
+                $(`#cekmarginn`).load(` #cekmarginn` );
+              // =================================================
               $("#test").load("snmp/ird.php").text();
             }, 1000);
         });
 </script>
+
+{{-- <script type='text/javascript'>
+const myInterval = setInterval(myTimer, 1000);
+
+function myTimer() {
+   document.getElementById("cekmargin").contentWindow.location.reload(true);
+}
+
+</script> --}}
 <footer class="bg-light text-center text-lg-start">
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">

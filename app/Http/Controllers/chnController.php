@@ -6,7 +6,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Routing\Controller;
 use App\Models\channel;
 use Illuminate\Validation\Rules\Unique;
-
+use Illuminate\Support\Facades\Http;
+use GuzzleHttp\Client;
 class chnController extends Controller
 {
     public function readData()
