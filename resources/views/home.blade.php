@@ -12,9 +12,9 @@
     <h2 class="display-6" id="#">Monitoring Status IRD Live</h2>
     <p id="test"></p>
     <div class="row pt-4">
-      <div class=" kartu ">
+      {{-- <div class=" kartu ">
         <div class="">
-          {{-- <i class="fas fa-tv fa-3x"></i> --}}
+          <i class="fas fa-tv fa-3x"></i>
           <div class="card-body">
             <h5 class="card-title">IRD Live 1</h5>
             <table class="table table-stripe">
@@ -52,7 +52,7 @@
 
       <div class=" kartu ">
         <div class="">
-          {{-- <i class="fas fa-tv fa-3x"></i> --}}
+          <i class="fas fa-tv fa-3x"></i>
           <div class="card-body">
             <h5 class="card-title">IRD Live 2</h5>
             <table class="table table-stripe">
@@ -91,7 +91,7 @@
 
       <div class=" kartu ">
         <div class="">
-          {{-- <i class="fas fa-tv fa-3x"></i> --}}
+          <i class="fas fa-tv fa-3x"></i>
           <div class="card-body">
             <h5 class="card-title">IRD Live 3</h5>
             <table class="table table-stripe">
@@ -128,7 +128,7 @@
             </div>
           </div>
         </div>
-      </div> <br>
+      </div> <br> --}}
 
       {{-- <div class=" kartu  ">
         <div class="">
@@ -152,9 +152,9 @@
     </div>
 
     <div class="row pt-4 gx-4 gy-4">
-      <div class=" kartu ">
+      {{-- <div class=" kartu ">
         <div class="">
-          {{-- <i class="fas fa-tv fa-3x"></i> --}}
+          <i class="fas fa-tv fa-3x"></i>
           <div class="card-body">
             <h5 class="card-title">IRD Live 4</h5>
             <table class="table table-stripe">
@@ -195,7 +195,7 @@
 
       <div class=" kartu ">
         <div class="">
-          {{-- <i class="fas fa-tv fa-3x"></i> --}}
+          <i class="fas fa-tv fa-3x"></i>
           <div class="card-body">
             <h5 class="card-title">IRD Live 5</h5>
             <table class="table table-stripe">
@@ -233,7 +233,7 @@
 
       <div class=" kartu ">
         <div class="">
-          {{-- <i class="fas fa-tv fa-3x"></i> --}}
+          <i class="fas fa-tv fa-3x"></i>
           <div class="card-body">
             <h5 class="card-title">IRD Live 6</h5>
             <table class="table table-stripe">
@@ -267,47 +267,34 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> --}}
     </div>
-    @foreach ($responseBody as $rsp)
+    <div class="table-responsive">
+      <table class="table table-hover">
+  <thead class="bg-dark text-white">
+    <tr>
+      <th scope="col">IRD</th>
+      <th scope="col">Satelit status</th>
+      <th scope="col">margin</th>
+      <th scope="col">Video Bitrate</th>
+      <th>aksi</th>
+    </tr>
+  </thead>
+  <tbody >
     <?php $no=1 ?>
-    <div class=" kartu ">
-        <div class="">
-          {{-- <i class="fas fa-tv fa-3x"></i> --}}
-          <div class="card-body">
-            <h5 class="card-title">IRD Test</h5>
-            <table class="table table-stripe">
-              <thead>
-                <tr>
-                  <th>Status : <span id="cekstatusSat"></span> </th>
-                </tr>
-                <tr>
-                  <td align="left">Service ID : <span id="cekservice"></span></td>
-                </tr>
-                <tr>
-                  <td align="left">Video Status : <span id="cekstatus"></span></td>
-                </tr>
-                <tr>
-                  <td align="left">Video Bitrate : <span id="cekbitrate"></span> bits/s</td>
-                </tr>
-                <tr>
-                  <td align="left">Kualitas : <span id="cekkualitas"></span></td>
-                </tr>
-                <tr>
-                  <td align="left">Margin : <span id="cekmarginn">{{$rsp->margin}}</span></td>
-                </tr>
-              </thead>
-            </table>
-            <div class=" mx-auto">
-              <a href="http://192.168.112.2" target="__blank">
-                <button type="button" class="btn btn-primary">Lihat IRD</button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    <?php $no ?>
-      @endforeach
+    @foreach ($responseBody as $rsp)
+    <tr>
+      <th scope="row">IRD {{$no++}}</th>
+      <td><span class="status_sat{{$no}}">{{$rsp->status_sat}}</span></td>
+      <td><span class="margin{{$no}}">{{$rsp->margin}}</span> dB</td>
+      <td><span class="bitrate{{$no}}">{{$rsp->video_bitrate}}</span></td>
+      <td><button class="btn btn-info">detail</button></td>
+    </tr>
+    @endforeach
+  </tbody>
+</table>
+    </div>
+   
     <hr>
     {{-- <div class=" mx-auto text-center pt-3">
       <a href="/dashboard">
