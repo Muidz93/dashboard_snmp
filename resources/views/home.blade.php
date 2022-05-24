@@ -312,38 +312,7 @@
         </div>
       </div> --}}
     </div>
-    <div class="table-responsive">
-      <table class="table table-hover">
-  <thead class="bg-dark text-white">
-    <tr>
-      <th scope="col">IRD</th>
-      <th scope="col">Satelit status</th>
-      <th scope="col">margin</th>
-      <th scope="col">Video Bitrate</th>
-      <th>aksi</th>
-    </tr>
-  </thead>
-  <tbody >
-    <?php $no=1 ?>
-    @foreach ($responseBody as $rsp)
-    <tr>
-      <th scope="row">IRD {{$no++}}</th>
-      <td><span class="status_sat{{$no}}">{{$rsp->status_sat}}</span></td>
-      <td><span class="margin{{$no}}">{{$rsp->margin}}</span> dB</td>
-      <td><span class="bitrate{{$no}}">{{$rsp->video_bitrate}}</span></td>
-      <td><button class="btn btn-info">detail</button></td>
-    </tr>
-    @endforeach
-  </tbody>
-</table>
-    </div>
-   
     <hr>
-    {{-- <div class=" mx-auto text-center pt-3">
-      <a href="/dashboard">
-        <button type="button" class="btn btn-danger btn-lg">Lihat Detail</button>
-      </a>
-    </div> --}}
   </div>
 </div>
 
@@ -352,10 +321,9 @@
   <div class="container text-center">
     <h2 class="display-6" id="#">Monitoring Status IRD Live</h2>
     <div class="row pt-4 gx-4 gy-4">
-        <table class="table table-stripe">
-            <thead>
+        <table class="table table-stripe table-hover">
+            <thead class="bg-dark text-white">
                 <tr>
-                    <th class="col-1">No</th>
                     <th>List IRD</th>
                     <th>Satelit</th>
                     <th>IP Input</th>
@@ -364,19 +332,18 @@
                     <th class="col-2">Aksi</th>
                 </tr>
             </thead>
-
             <tbody>
-                    <tr>
-                        <td align="center">1</td>
-                        <td align="center">IRD 1</td>
-                        <td align="center"><span id="cekstatusSat2"></span></td>
-                        <td align="center">Unlocked</td>
-                        <td align="center"><span id="cekstatus2"></span></td>
-                        <td align="center"><span id="cekmargin2"></span></td>
-                        <td>
-                            <span class="badge bg-warning text-dark">Lihat Detail</span>
-                        </td> 
-                    </tr>
+              <?php $no=1 ?>
+              @foreach ($snmp as $rsp)
+              <tr>
+                <th scope="row">IRD {{$no++}}</th>
+                <td><span class="status_sat{{$no}}">{{$rsp->status_sat}}</span></td>
+                <td><span class="status_ip{{$no}}">{{$rsp->status_ip}}</span></td>
+                <td><span class="margin{{$no}}">{{$rsp->margin}}</span> dB</td>
+                <td><span class="bitrate{{$no}}">{{$rsp->video_bitrate}}</span></td>
+                <td><button class="btn btn-info">detail</button></td>
+              </tr>
+              @endforeach
             </tbody>
         </table>
     </div>

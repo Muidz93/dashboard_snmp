@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\channel;
 use App\Models\ird;
+use App\Models\snmp;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
@@ -69,17 +70,17 @@ class irdController extends Controller
         $chn = channel::count();
         $hd = channel::where('kualitas', 'HD')->count();
         $sd = channel::where('kualitas', 'SD')->count();
-        
-        $client = new Client(); 
-        $url = "http://localhost:8080/api/ird";
+        $snmp =snmp::all();
+        // $client = new Client(); 
+        // $url = "http://localhost:8080/api/ird";
 
 
-        $response = $client->request('GET', $url, [
-            'verify'  => false,
-        ]);
+        // $response = $client->request('GET', $url, [
+        //     'verify'  => false,
+        // ]);
 
-        $responseBody = json_decode($response->getBody());
-        return view('home',compact('hd','hitung', 'harmonic','sd','chn','ericsson','responseBody'));
+        // $responseBody = json_decode($response->getBody());
+        return view('home',compact('hd','hitung', 'harmonic','sd','chn','ericsson','snmp'));
     }
 
     // public function hd()

@@ -51,7 +51,12 @@
                 $(`.bitrate${index}`).load(` .bitrate${index}` );
                 $(`.margin${index}`).load(` .margin${index}` );
                 $(`.status_sat${index}`).load(` .status_sat${index}` );
+                $(`.status_ip${index}`).load(` .status_ip${index}` );
               }
+                // $satelit = $(`#status`).text();
+                // if ($satelit == "locked") {
+                //   $('#status').css('color', '#4285F4');
+                // }
               // =================================================
               // $("#test").load("snmp/ird.php").text();
             }, 1000);
