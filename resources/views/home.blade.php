@@ -14,6 +14,7 @@
     <div class="row pt-4 gx-4 gy-4">
       <div class="col-md-4 ">
         <div class="card crop-img">
+          <i class="fas fa-tv fa-2x py-auto"></i>
             <div class="card-body">
               <h5 class="card-tittle text-center">Total Channel UseeTV</h5>
               <p class="card-text text-center">{{ $chn }} Channel</p>
@@ -50,11 +51,11 @@
 </div>
 
 <!-- Monit IRD -->
-<div class="pt-5 pb-5 bg-light">
+{{-- <div class="pt-5 pb-5 bg-light">
   <div class="container text-center">
     <h2 class="display-6" id="#">Monitoring Status IRD Live</h2>
     <p id="test"></p>
-    <div class="row pt-4">
+    <div class="row pt-4"> --}}
       {{-- <div class=" kartu ">
         <div class="">
           <i class="fas fa-tv fa-3x"></i>
@@ -339,9 +340,11 @@
                 <th scope="row">IRD {{$no++}}</th>
                 <td><span class="status_sat{{$no}}">{{$rsp->status_sat}}</span></td>
                 <td><span class="status_ip{{$no}}">{{$rsp->status_ip}}</span></td>
+                <td><span class="status_video{{$no}}">{{$rsp->status_video}}</span></td>
                 <td><span class="margin{{$no}}">{{$rsp->margin}}</span> dB</td>
-                <td><span class="bitrate{{$no}}">{{$rsp->video_bitrate}}</span></td>
-                <td><button class="btn btn-info">detail</button></td>
+                <td>
+                  <a href="/dashboard"><button class="btn btn-info">detail</button></a>
+                </td>
               </tr>
               @endforeach
             </tbody>

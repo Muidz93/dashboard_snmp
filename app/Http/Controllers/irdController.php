@@ -83,11 +83,8 @@ class irdController extends Controller
         return view('home',compact('hd','hitung', 'harmonic','sd','chn','ericsson','snmp'));
     }
 
-    // public function hd()
-    // {
-
-    //     $hd = channel::where('kualitas', 'HD')->count();
-    //     return view('home',compact('hd'));
-    //     // return $hd;
-    // }
+   public function detail()
+   {
+       return view('dashboard.snmp');
+   }
 }
