@@ -192,11 +192,11 @@
             <p class="card-text">{{ $sd }} Channel</p>
           </div>
         </div>
-      </div> --}}
-    </div>
+      </div> 
+    </div>--}}
 
-    <div class="row pt-4 gx-4 gy-4">
-      {{-- <div class=" kartu ">
+    {{--<div class="row pt-4 gx-4 gy-4">
+       <div class=" kartu ">
         <div class="">
           <i class="fas fa-tv fa-3x"></i>
           <div class="card-body">
@@ -311,17 +311,18 @@
             </div>
           </div>
         </div>
-      </div> --}}
-    </div>
+      </div> 
+    </div>--}}
     <hr>
-  </div>
-</div>
+  {{-- </div>
+</div> --}}
 
 <!-- Monit IRD -->
 <div class="container-fluid pt-5 pb-2 bg-light">
   <div class="container text-center">
     <h2 class="display-6" id="#">Monitoring Status IRD Live</h2>
     <div class="row pt-4 gx-4 gy-4">
+      <div class="table-responsive">
         <table class="table table-stripe table-hover">
             <thead class="bg-dark text-white">
                 <tr>
@@ -330,6 +331,7 @@
                     <th>IP Input</th>
                     <th>Status Video</th>
                     <th>Margin</th>
+                    <th>Bitrate</th>
                     <th class="col-2">Aksi</th>
                 </tr>
             </thead>
@@ -337,18 +339,21 @@
               <?php $no=1 ?>
               @foreach ($snmp as $rsp)
               <tr>
-                <th scope="row">IRD {{$no++}}</th>
+                <th scope="row">IRD {{$no}}</th>
                 <td><span class="status_sat{{$no}}">{{$rsp->status_sat}}</span></td>
                 <td><span class="status_ip{{$no}}">{{$rsp->status_ip}}</span></td>
                 <td><span class="status_video{{$no}}">{{$rsp->status_video}}</span></td>
                 <td><span class="margin{{$no}}">{{$rsp->margin}}</span> dB</td>
+                <td><span class="bitrate{{$no}}">{{$rsp->video_bitrate}}</span></td>
                 <td>
                   <a href="/dashboard"><button class="btn btn-info">detail</button></a>
                 </td>
               </tr>
+              <?php $no++; ?>
               @endforeach
             </tbody>
         </table>
+        </div>
     </div>
   </div>
 </div>

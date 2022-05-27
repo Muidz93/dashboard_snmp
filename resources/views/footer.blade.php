@@ -1,5 +1,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function() {
             setInterval(function() {
@@ -47,12 +47,13 @@
               // $("#cekstatusSat6").load("snmp/ird6/statusSat.php").text();
               // $("#cekstatus6").load("snmp/ird6/statusVid.php").text();
               // =================================================
-              for (let index = 0; index < 7; index++) {
-                $(`.bitrate${index}`).load(` .bitrate${index}` );
-                $(`.margin${index}`).load(` .margin${index}` );
-                $(`.status_sat${index}`).load(` .status_sat${index}` );
-                $(`.status_ip${index}`).load(` .status_ip${index}` );
-              }
+              for (let index = 1; index <= 6; index++) {
+                $('.margin'+index).load(window.location.href + ' .margin'+index );
+                $('.bitrate'+index).load(window.location.href + ' .bitrate'+index );
+                $('.status_sat'+index).load(window.location.href + ' .status_sat'+index );
+                $('.status_ip'+index).load(window.location.href + ' .status_ip'+index );
+                $('.status_vid'+index).load(window.location.href + ' .status_vid'+index );
+                }
                 // $satelit = $(`#status`).text();
                 // if ($satelit == "locked") {
                 //   $('#status').css('color', '#4285F4');
@@ -62,7 +63,14 @@
             }, 1000);
         });
 </script>
-
+{{-- <script type="text/javascript">
+    setInterval(ulang, 1000);
+  function ulang() {
+    var container = document.getElementById("isi");
+    var content = container.innerHTML;
+    container.innerHTML= content; 
+  }
+</script> --}}
 {{-- <script type='text/javascript' src={{url('/js/script.js')}}></script> --}}
 <footer class="bg-light text-center text-lg-start">
         <!-- Copyright -->
