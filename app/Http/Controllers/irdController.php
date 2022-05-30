@@ -83,8 +83,9 @@ class irdController extends Controller
         return view('home',compact('hd','hitung', 'harmonic','sd','chn','ericsson','snmp'));
     }
 
-   public function detail()
+   public function detail($id)
    {
-       return view('dashboard.snmp');
+       $snmp=snmp::find($id);
+       return view('dashboard.snmp',compact('snmp'));
    }
 }

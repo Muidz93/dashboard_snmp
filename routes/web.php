@@ -29,7 +29,7 @@ route::group(['middleware' => ['auth']], function () {
     Route::get('/list_ird', [irdController::class,'readData']);
     Route::get('/channels', [chnController::class, 'readData']);
     // Route::get('/dashboard', [DashboardController::class, 'readData']);
-    Route::get('/dashboard', [irdController::class, 'detail']);
+    Route::get('/ird/{id}', [irdController::class, 'detail']);
 
     Route::get('/input', [irdController::class,'index']);
     Route::post('/input', [irdController::class,'store']);
