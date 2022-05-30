@@ -47,7 +47,7 @@
             <div class="card-footer bg-white">
               <small class="text-start fw-bold">Margin {{$snmp->margin}} dB</small><br>
               <div class="progress">
-                <div class="progress-bar" style="width:{{$snmp->margin}}%"></div>
+                <div class="progress-bar" style="width:{{$snmp->margin*10}}%"></div>
               </div>
             </div>
 
