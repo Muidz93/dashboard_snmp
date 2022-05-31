@@ -91,5 +91,5 @@
   </div>
 </div>
 
-
+@include('script')
 @include('footer')

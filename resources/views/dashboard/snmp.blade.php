@@ -25,51 +25,23 @@
                           <i class="fas fa-satellite-dish fa-2x py-auto" aria-hidden="true"></i>
                             <div class="card-body text-end">
                               <small class="text-start fw-bold">Satelit Input</small><br>
-                                <?php
-                                  $satelit = $snmp->status_sat;
-
-                                  if ($satelit == "LOCKED") 
-                                  {
-                                    echo 
-                                    "<font color='green'><small class='text-start fw-bold'>$satelit</small></font>";
-                                  }
-                                  else if ($satelit == "UNLOCKED")
-                                  {
-                                    echo 
-                                    "<font color='red'><small class='text-start fw-bold'>$satelit</small></font>";;
-                                  }
-                                ?>
-                                {{-- {{$snmp->status_sat}} --}}
+                              <small class='text-start fw-bold'><span id="status_sat">{{$snmp->status_sat}}</span></small>
                               </div>
                           </div>
                       </div> 
 
                       <div class="card-footer bg-white">
-                        <small class="text-start fw-bold">Margin {{$snmp->margin}} dB</small><br>
+                        <small class="text-start fw-bold">Margin <span id="margin">{{$snmp->margin}}</span> dB</small><br>
                         <div class="progress">
-                          <div class="progress-bar" style="width:{{$snmp->margin*10}}%"></div>
+                          <div class="progress-bar" id="margin-bar" ></div>
                         </div>
                       </div>
-                
                       <div class="card-footer bg-white">
                           <div class="d-flex align-items-center px-2">
                               <i class="fas fa-ethernet fa-2x py-auto color-green" aria-hidden="true"></i>
                               <div class="card-body text-end">
                                 <small class="text-start fw-bold">IP Input</small><br>
-                                  <?php
-                                  $ip = $snmp->status_ip;
-                                  if ($ip == "LOCKED") 
-                                  {
-                                    echo 
-                                    "<font color='green'><small class='text-start fw-bold'>LOCKED</small></font>";
-                                  }
-                                  else if ($ip == "UNLOCKED")
-                                  {
-                                    echo 
-                                    "<font color='red'><small class='text-start fw-bold'>UNLOCKED</small></font>";;
-                                  }
-                                ?>
-                                  {{-- <small class="text-start fw-bold">{{$snmp->status_ip}}</small> --}}
+                                <small class='text-start fw-bold'><span id="status_ip">{{$snmp->status_ip}}</span></small>
                               </div>
                           </div>
                       </div>
@@ -88,7 +60,7 @@
                         <i class="fas fa-video fa-2x py-auto" aria-hidden="true"></i>
                         <div class="card-body text-end">
                             <small class="text-start fw-bold">Video Status</small><br>
-                            <small class="text-start fw-bold">{{$snmp->status_video}}</small>
+                            <small class="text-start fw-bold"><span id="status_video">{{$snmp->status_video}}</span></small>
                         </div>
                     </div>
                 </div>
@@ -98,7 +70,7 @@
                       <i class="fas fa-video fa-2x py-auto" aria-hidden="true"></i>
                       <div class="card-body text-end">
                           <small class="text-start fw-bold">TS Bitrate</small><br>
-                          <small class="text-start fw-bold">#</small>
+                          <small class="text-start fw-bold"><span id="ts_bitrate">{{$snmp->ts_bitrate}}</span></small>
                       </div>
                   </div>
                 </div>
@@ -108,7 +80,7 @@
                         <i class="fas fa-video fa-2x py-auto" aria-hidden="true"></i>
                         <div class="card-body text-end">
                             <small class="text-start fw-bold">Video Bitrate</small><br>
-                            <small class="text-start fw-bold">{{$snmp->video_bitrate}}</small>
+                            <small class="text-start fw-bold"><span id="bitrate">{{$snmp->video_bitrate}}</span></small>
                         </div>
                     </div>
                 </div>
@@ -127,7 +99,7 @@
                         <i class="fas fa-tv fa-2x py-auto" aria-hidden="true"></i>
                         <div class="card-body text-end">
                             <small class="text-start fw-bold">Service Terpilih</small><br>
-                            <small class="text-start fw-bold">#</small>
+                            <small class="text-start fw-bold"><span id="service">{{$snmp->service}}</span></small>
                         </div>
                     </div>
                 </div>
@@ -137,7 +109,7 @@
                       <i class="fas fa-volume-up fa-2x py-auto" aria-hidden="true"></i>
                       <div class="card-body text-end">
                           <small class="text-start fw-bold">AUDIO 1 Terpilih</small><br>
-                          <small class="text-start fw-bold">#</small>
+                          <small class="text-start fw-bold"><span id="pid_audio1">{{$snmp->PID_audio}}</span></small>
                       </div>
                   </div>
                 </div>
@@ -147,7 +119,7 @@
                         <i class="fas fa-volume-up fa-2x py-auto" aria-hidden="true"></i>
                         <div class="card-body text-end">
                             <small class="text-start fw-bold">AUDIO 2 Terpilih</small><br>
-                            <small class="text-start fw-bold">#</small>
+                            <small class="text-start fw-bold"><span id="pid_audio2">{{$snmp->PID_audio2}}</span></small>
                         </div>
                     </div>
                 </div>
@@ -158,5 +130,29 @@
     </div>
   </div>
 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha512-k2WPPrSgRFI6cTaHHhJdc8kAXaRM4JBFEDo1pPGGlYiOyv4vnA0Pp0G5XMYYxgAPmtmv/IIaQA6n5fLAyJaFMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+            setInterval(function() {
+                $('#margin').load(location.href + ' #margin' );
+                $margin = $("#margin").text()*10;
+                $('#margin-bar').css({"width":$margin+'%'});
+                $margin < 30 ? $('#margin-bar').css({"background-color": "red"}) : $('#margin-bar').css({"background-color": "blue"}) 
+                $('#bitrate').load(location.href + ' #bitrate' );
+                $('#ts_bitrate').load(location.href + ' #ts_bitrate' );
+                $('#status_sat').load(location.href + ' #status_sat' );
+                $('#status_ip').load(location.href + ' #status_ip' );
+                $('#status_video').load(location.href + ' #status_video' );
+                $('#service').load(location.href + ' #service' );
+                $('#pid_audio1').load(location.href + ' #pid_audio1' );
+                $('#pid_audio2').load(location.href + ' #pid_audio2' );
+                $("#status_sat").text() == "LOCKED" ?  $("#status_sat").css({"color":"green"}) : $("#status_sat").css({"color":"red"}); 
+                $("#status_ip").text() == "LOCKED" ?  $("#status_ip").css({"color":"green"}) : $("#status_ip").css({"color":"red"}); 
+              // $("#test").load("snmp/ird.php").text();
+            }, 1000);
+        });
+</script>
 
 @include('footer')

@@ -1,4 +1,4 @@
-@include('channels.header')
+@include('header')
 
 <div class="tengah">
     <div class="col-lg-7">
