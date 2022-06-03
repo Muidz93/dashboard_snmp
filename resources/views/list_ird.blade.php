@@ -73,5 +73,5 @@
         {{ $irds->links() }}
     </div>
 </div>
-
+@include('script')
 @include('footer')

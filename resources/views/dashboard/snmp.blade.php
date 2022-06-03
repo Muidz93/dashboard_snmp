@@ -7,7 +7,7 @@
     </div>
 </div>
 
-<div class="container-fluid pt-5 pb-2 bg-light">
+<div class="container-fluid py-5 bg-light">
     <div class="container text-center">
       <h2 class="display-6" id="channel">IRD Live {{$snmp->id}}</h2>
       <div class="row pt-4 gx-4 gy-4">
@@ -131,8 +131,7 @@
   </div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha512-k2WPPrSgRFI6cTaHHhJdc8kAXaRM4JBFEDo1pPGGlYiOyv4vnA0Pp0G5XMYYxgAPmtmv/IIaQA6n5fLAyJaFMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+@include('script')
 <script type="text/javascript">
   $(document).ready(function() {
             setInterval(function() {
@@ -148,6 +147,7 @@
                 $('#service').load(location.href + ' #service' );
                 $('#pid_audio1').load(location.href + ' #pid_audio1' );
                 $('#pid_audio2').load(location.href + ' #pid_audio2' );
+                $('#status_video').text() == "Video Running" ?  $('#status_video').css({"color":"green"}) : $('#status_video').css({"color":"red"}); 
                 $("#status_sat").text() == "LOCKED" ?  $("#status_sat").css({"color":"green"}) : $("#status_sat").css({"color":"red"}); 
                 $("#status_ip").text() == "LOCKED" ?  $("#status_ip").css({"color":"green"}) : $("#status_ip").css({"color":"red"}); 
               // $("#test").load("snmp/ird.php").text();

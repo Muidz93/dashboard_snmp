@@ -86,6 +86,9 @@ class irdController extends Controller
    public function detail($id)
    {
        $snmp=snmp::find($id);
+        if ($snmp === null) {
+            return redirect('/')->with('bandel', 'bandel');
+        }
        return view('dashboard.snmp',compact('snmp'));
    }
 }

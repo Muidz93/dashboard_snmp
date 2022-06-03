@@ -14,7 +14,7 @@
     <div class="row pt-4 gx-4 gy-4">
       <div class="col-md-4 ">
         <div class="card crop-img">
-          <i class="fas fa-tv fa-2x py-auto"></i>
+          <i class="fas fa-tv fa-2x py-5"></i>
             <div class="card-body">
               <h5 class="card-tittle text-center">Total Channel UseeTV</h5>
               <p class="card-text text-center">{{ $chn }} Channel</p>
@@ -26,6 +26,7 @@
       </div>
       <div class="col-md-4 ">
         <div class="card crop-img">
+          <i class="fas fa-ruler-vertical fa-2x py-5"></i>
           <div class="card-body">
               <h5 class="card-tittle text-center">Total IRD</h5>
               <p class="card-text text-center">{{ $hitung }} Unit</p>
@@ -37,6 +38,7 @@
       </div>
       <div class="col-md-4 ">
         <div class="card crop-img">
+          <i class="fas fa-compact-disc fa-2x py-5"></i>
           <div class="card-body">
               <h5 class="card-tittle text-center">Total Encoder</h5>
               <p class="card-text text-center">{{ $hitung }} Unit</p>
@@ -92,4 +94,21 @@
 </div>
 
 @include('script')
+<script type="text/javascript">
+  $(document).ready(function() {
+            setInterval(function() {
+              for (let index = 1; index <= 6; index++) {
+                $('#margin'+index).load(location.href + ' #margin'+index );
+                $('#bitrate'+index).load(location.href + ' #bitrate'+index );
+                $('#status_sat'+index).load(location.href + ' #status_sat'+index );
+                $('#status_ip'+index).load(location.href + ' #status_ip'+index );
+                $('#status_video'+index).load(location.href + ' #status_video'+index );
+                $('#status_sat'+index).text() == "LOCKED" ?  $('#status_sat'+index).css({"color":"green"}) : $('#status_sat'+index).css({"color":"red"}); 
+                $('#status_ip'+index).text() == "LOCKED" ?  $('#status_ip'+index).css({"color":"green"}) : $('#status_ip'+index).css({"color":"red"}); 
+                $('#status_video'+index).text() == "Video Running" ?  $('#status_video'+index).css({"color":"green"}) : $('#status_video'+index).css({"color":"red"}); 
+                }
+              // $("#test").load("snmp/ird.php").text();
+            }, 1000);
+        });
+</script>
 @include('footer')

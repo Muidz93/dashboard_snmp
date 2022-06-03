@@ -88,4 +88,9 @@ class chnController extends Controller
         return redirect('/channels')->with('berhasil','berhasil ubah data');
         // return $chn;
     }
+    public function err($er)
+    {
+        return view('error', compact('er'));
+    }
+    
 }

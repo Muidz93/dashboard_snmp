@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
-
+use RealRashid\SweetAlert\Facades\Alert;
 
 class loginController extends Controller
 {
@@ -31,7 +31,7 @@ class loginController extends Controller
         // return $credentials;
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-
+            Alert::success('Login successful', 'Thank You');
             return redirect()->intended('/');
             // return $credentials;
         }else{
@@ -48,7 +48,7 @@ class loginController extends Controller
         $request->session()->invalidate();
 
         $request->session()->regenerateToken();
-
+        Alert::success('Logout successful', 'Thank You');
         return redirect('/login');
     }
 

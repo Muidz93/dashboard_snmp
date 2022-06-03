@@ -35,13 +35,14 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
+            @auth
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#masterdata" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dashboard
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/channel">Channel</a></li>
+                  <li><a class="dropdown-item" href="/channels">Channels</a></li>
                   <li><a class="dropdown-item" href="/list_ird">IRD</a></li>
                   <li><a class="dropdown-item" href="#">Encoder</a></li>
                   <li><a class="dropdown-item" href="#">Jgater</a></li>
@@ -55,7 +56,7 @@
                 <a class="nav-link" href="#staff">Staff</a>
               </li>
             </ul>
-
+            @endauth
             <ul class="navbar-nav ms-auto">
               @auth
                   <li class="nav-item dropdown">

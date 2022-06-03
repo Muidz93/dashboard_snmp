@@ -53,13 +53,8 @@ route::group(['middleware' => ['guest']], function () {
     Route::get('/register', [registerController::class, 'index']);
 });
 
-
-
-
-
-
-
-
+route::get('/{err}', [chnController::class, 'err']);
+route::get('/{err}/{error}', [chnController::class, 'err']);
 
 
 // Route::get('/dashboard', [DashboardController::class,'index']);
