@@ -14,7 +14,7 @@
     <div class="row pt-4 gx-4 gy-4">
       <div class="col-md-4 ">
         <div class="card crop-img">
-          <i class="fas fa-tv fa-2x py-5"></i>
+          <i class="bi bi-broadcast-pin" style="font-size: 5rem;"></i>
             <div class="card-body">
               <h5 class="card-tittle text-center">Total Channel UseeTV</h5>
               <p class="card-text text-center">{{ $chn }} Channel</p>
@@ -26,7 +26,7 @@
       </div>
       <div class="col-md-4 ">
         <div class="card crop-img">
-          <i class="fas fa-ruler-vertical fa-2x py-5"></i>
+          <i class="bi bi-box2-fill" style="font-size: 5rem;"></i>
           <div class="card-body">
               <h5 class="card-tittle text-center">Total IRD</h5>
               <p class="card-text text-center">{{ $hitung }} Unit</p>
@@ -38,7 +38,7 @@
       </div>
       <div class="col-md-4 ">
         <div class="card crop-img">
-          <i class="fas fa-compact-disc fa-2x py-5"></i>
+          <i class="bi bi-boombox-fill" style="font-size: 5rem;"></i>
           <div class="card-body">
               <h5 class="card-tittle text-center">Total Encoder</h5>
               <p class="card-text text-center">{{ $hitung }} Unit</p>
@@ -81,7 +81,7 @@
                 <td><span id="margin{{$no}}">{{$rsp->margin}}</span> dB</td>
                 <td><span id="bitrate{{$no}}">{{$rsp->video_bitrate}}</span></td>
                 <td>
-                  <a href="/ird/{{$rsp->id}}"><button class="btn btn-info">detail</button></a>
+                  <a href="/ird/{{$rsp->id}}"><button class="btn btn-info"><i class="bi bi-eye" style="color:white;"></i></button></a>
                 </td>
               </tr>
               <?php $no++; ?>

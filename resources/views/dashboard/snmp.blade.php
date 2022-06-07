@@ -11,9 +11,9 @@
     <div class="container text-center">
       <h2 class="display-6" id="channel">IRD Live {{$snmp->id}}</h2>
       <div class="row pt-4 gx-4 gy-4">
-
+        <hr>
             {{-- Input Status --}}
-            <div class="col-md-3">
+            <div class="col-md-4">
               <div class="card crop-img">
                 <div class="card-body">
                     <h5 class="card-tittle text-center">INPUT STATUS</h5>    
@@ -22,7 +22,7 @@
 
                       <div class="card-footer bg-white">
                         <div class="d-flex align-items-center px-2">
-                          <i class="fas fa-satellite-dish fa-2x py-auto" aria-hidden="true"></i>
+                          <i class="bi bi-broadcast" style="font-size: 2rem;"></i>
                             <div class="card-body text-end">
                               <small class="text-start fw-bold">Satelit Input</small><br>
                               <small class='text-start fw-bold'><span id="status_sat">{{$snmp->status_sat}}</span></small>
@@ -38,7 +38,7 @@
                       </div>
                       <div class="card-footer bg-white">
                           <div class="d-flex align-items-center px-2">
-                              <i class="fas fa-ethernet fa-2x py-auto color-green" aria-hidden="true"></i>
+                              <i class="bi bi-usb-plug-fill" style="font-size: 2rem;"></i>
                               <div class="card-body text-end">
                                 <small class="text-start fw-bold">IP Input</small><br>
                                 <small class='text-start fw-bold'><span id="status_ip">{{$snmp->status_ip}}</span></small>
@@ -57,7 +57,7 @@
 
                 <div class="card-footer bg-white">
                     <div class="d-flex align-items-center px-2">
-                        <i class="fas fa-video fa-2x py-auto" aria-hidden="true"></i>
+                        <i class="bi bi-valentine" style="font-size: 2rem;"></i>
                         <div class="card-body text-end">
                             <small class="text-start fw-bold">Video Status</small><br>
                             <small class="text-start fw-bold"><span id="status_video">{{$snmp->status_video}}</span></small>
@@ -67,20 +67,20 @@
 
                 <div class="card-footer bg-white">
                   <div class="d-flex align-items-center px-2">
-                      <i class="fas fa-video fa-2x py-auto" aria-hidden="true"></i>
+                      <i class="bi bi-sd-card-fill" style="font-size: 2rem; "></i>
                       <div class="card-body text-end">
                           <small class="text-start fw-bold">TS Bitrate</small><br>
-                          <small class="text-start fw-bold"><span id="ts_bitrate">{{$snmp->ts_bitrate}}</span></small>
+                          <small class="text-start fw-bold"><span id="ts_bitrate">{{number_format($snmp->ts_bitrate)}}</span> Mbps</small>
                       </div>
                   </div>
                 </div>
                 
                 <div class="card-footer bg-white">
                     <div class="d-flex align-items-center px-2">
-                        <i class="fas fa-video fa-2x py-auto" aria-hidden="true"></i>
+                        <i class="bi bi-rss-fill" style="font-size: 2rem;"></i>
                         <div class="card-body text-end">
                             <small class="text-start fw-bold">Video Bitrate</small><br>
-                            <small class="text-start fw-bold"><span id="bitrate">{{$snmp->video_bitrate}}</span></small>
+                            <small class="text-start fw-bold"><span id="bitrate">{{number_format($snmp->video_bitrate)}}</span> Mbits/s</small>
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
 
                 <div class="card-footer bg-white">
                     <div class="d-flex align-items-center px-2">
-                        <i class="fas fa-tv fa-2x py-auto" aria-hidden="true"></i>
+                        <i class="bi bi-soundwave" style="font-size: 2rem;"></i>
                         <div class="card-body text-end">
                             <small class="text-start fw-bold">Service Terpilih</small><br>
                             <small class="text-start fw-bold"><span id="service">{{$snmp->service}}</span></small>
@@ -106,7 +106,7 @@
 
                 <div class="card-footer bg-white">
                   <div class="d-flex align-items-center px-2">
-                      <i class="fas fa-volume-up fa-2x py-auto" aria-hidden="true"></i>
+                      <i class="bi bi-soundwave" style="font-size: 2rem;"></i>
                       <div class="card-body text-end">
                           <small class="text-start fw-bold">AUDIO 1 Terpilih</small><br>
                           <small class="text-start fw-bold"><span id="pid_audio1">{{$snmp->PID_audio}}</span></small>
@@ -116,7 +116,7 @@
                 
                 <div class="card-footer bg-white">
                     <div class="d-flex align-items-center px-2">
-                        <i class="fas fa-volume-up fa-2x py-auto" aria-hidden="true"></i>
+                        <i class="bi bi-soundwave" style="font-size: 2rem;"></i>
                         <div class="card-body text-end">
                             <small class="text-start fw-bold">AUDIO 2 Terpilih</small><br>
                             <small class="text-start fw-bold"><span id="pid_audio2">{{$snmp->PID_audio2}}</span></small>
