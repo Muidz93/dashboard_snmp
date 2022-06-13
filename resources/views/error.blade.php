@@ -1,5 +1,6 @@
 @extends('header')
-    <div class="container my-5">
+<br><br>
+    <div class="container mt-5">
         <div class="row">
             <div class="nf">
                 <h1 class="text-center">Upss Sorry</h1>

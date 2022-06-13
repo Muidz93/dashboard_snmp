@@ -42,6 +42,7 @@ route::group(['middleware' => ['auth']], function () {
     Route::post('/channel/edit/{id}', [chnController::class, 'postEdit']);
     Route::post('/channel', [chnController::class, 'store']);
     Route::post('/test', [chnController::class, 'http_get']);
+    Route::get('/website', [chnController::class, 'website']);
 
 });
 Route::post('/login', [loginController::class, 'authenticate']);

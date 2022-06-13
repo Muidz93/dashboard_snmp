@@ -92,5 +92,8 @@ class chnController extends Controller
     {
         return view('error', compact('er'));
     }
-    
+    public function website()
+    {
+        return view("website");
+    }
 }

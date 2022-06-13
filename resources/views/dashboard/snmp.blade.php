@@ -6,7 +6,9 @@
         <h4 class="display-6 mt-3 mb-3">Monitoring IRD LIVE</h4>
     </div>
 </div>
-
+<div class="container mt-3">
+<a href="/" class="btn btn-success">Kembali</a>
+</div>
 <div class="container-fluid py-5 bg-light">
     <div class="container text-center">
       <h2 class="display-6" id="channel">IRD Live {{$snmp->id}}</h2>
@@ -130,8 +132,7 @@
     </div>
   </div>
 
-
-@include('script')
+<script src="{{ mix('js/app.js') }}"></script>
 <script type="text/javascript">
   $(document).ready(function() {
             setInterval(function() {

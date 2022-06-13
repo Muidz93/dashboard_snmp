@@ -66,6 +66,5 @@
         </div>
     </div>
 </div>
-
-@include('script')
+<script src="{{ mix('js/app.js') }}"></script>
 @include('footer')
