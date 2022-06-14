@@ -16,7 +16,7 @@
                 width:170px;
                 height:170px;
                 background-color:#fcfcfc;
-                border-radius:80%;
+                /* border-radius:80%; */
             }
             @media(max-width:450px) {
                 .bg-icon{
@@ -32,24 +32,44 @@
     </div>
 </div>
 <!-- Data IRD -->
-<div class="container">
+<div class="container border my-3">
     <div class="row">
             <div class=" bg-icon mx-5 my-4">
                 <a href="http://36.89.207.251:8001/" target="_blank">
                     <img src="{{asset('images/logo/favicon.png')}}" class="img-icon " width="80">
                 </a>
+                <p class="text-center">Serah Terima Barang</p>
             </div>
             <div class=" bg-icon mx-5 my-4">
-            <a href="http://127.0.0.1" target="_blank">
-                <img src="{{asset('images/logo/favicon-snmp.png')}}" class="img-icon " width="80">
+            <a href="http://36.89.207.251:894/" target="_blank">
+                <img src="{{asset('images/logo/prtg.png')}}" class="img-icon " width="80">
             </a>
+            <p class="text-center">PRTG</p>
             </div>
             <div class=" bg-icon mx-5 my-4">
             <a href="http://36.89.207.251:8002/" target="_blank">
                 <img src="{{asset('images/logo/ms.png')}}" class="img-icon " width="80">
             </a>
+            <p class="text-center">Monitoring Suhu</p>
             </div>
             <div class=" bg-icon mx-5 my-4">
+            <a href="http://36.89.207.251:881/cacti" target="_blank">
+                <img src="{{asset('images/logo/m_logo.png')}}" class="img-icon " width="80">
+            </a>
+            <p class="text-center">Cacti</p>
+            </div>
+             <div class=" bg-icon mx-5 my-4">
+            <a href="http://36.89.207.251:881/cacti" target="_blank">
+                <img src="{{asset('images/logo/m_logo.png')}}" class="img-icon " width="80">
+            </a>
+            <p class="text-center">Cacti</p>
+            </div>
+             <div class=" bg-icon mx-5 my-4">
+            <a href="http://36.89.207.251:881/cacti" target="_blank">
+                <img src="{{asset('images/logo/m_logo.png')}}" class="img-icon " width="80">
+            </a>
+            </div>
+             <div class=" bg-icon mx-5 my-4">
             <a href="http://36.89.207.251:881/cacti" target="_blank">
                 <img src="{{asset('images/logo/m_logo.png')}}" class="img-icon " width="80">
             </a>

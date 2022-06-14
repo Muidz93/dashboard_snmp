@@ -42,7 +42,7 @@
                 <a class="nav-link" href="/website">Website</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#staff">Staff</a>
+                <a class="nav-link" href="/data">Data</a>
               </li>
             </ul>
             @endauth

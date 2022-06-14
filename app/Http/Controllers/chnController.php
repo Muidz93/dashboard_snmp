@@ -5,9 +5,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Routing\Controller;
 use App\Models\channel;
+use App\Models\gdrive;
 use Illuminate\Validation\Rules\Unique;
 use Illuminate\Support\Facades\Http;
 use GuzzleHttp\Client;
+use RealRashid\SweetAlert\Facades\Alert;
+use App\Models\ird;
+
+
 class chnController extends Controller
 {
     public function readData()
@@ -95,5 +100,25 @@ class chnController extends Controller
     public function website()
     {
         return view("website");
+    }
+    public function data()
+    {
+        return view('gdrive/data',[
+            "gdrive" => gdrive::latest()->filter(request(['search']))->paginate(5)->withQueryString()
+        ]);
+    }
+    public function gdrive()
+    {
+        return view('gdrive/input_gdrive');
+    }
+    public function gdrivepost(Request $request)
+    {
+        $gdrive=new gdrive;
+        $gdrive->nama_file=$request->nama;
+        $gdrive->owner=$request->owner;
+        $gdrive->link=$request->link;
+        $gdrive->save();
+        Alert::success('input successful', 'Thank You');
+        return redirect('/data');
     }
 }
