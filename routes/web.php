@@ -22,9 +22,6 @@ use App\Http\Controllers\registerController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('/login');
-// });
 route::group(['middleware' => ['auth']], function () {
     Route::get('/list_ird', [irdController::class,'readData']);
     Route::get('/channels', [chnController::class, 'readData']);
@@ -46,7 +43,9 @@ route::group(['middleware' => ['auth']], function () {
     Route::get('/data', [chnController::class, 'data']);
     Route::get('/data/add', [chnController::class, 'gdrive']);
     Route::post('/data/add', [chnController::class, 'gdrivepost']);
-
+    Route::get('/data/edit/{id}', [chnController::class, 'gdriveedit']);
+    Route::post('/data/edit/{id}', [chnController::class, 'gdriveeditPost']);
+    Route::post('/data/delete/{id}', [chnController::class, 'gdriveDelete']);
 });
 Route::post('/login', [loginController::class, 'authenticate']);
 Route::post('/logout', [loginController::class, 'logout']);

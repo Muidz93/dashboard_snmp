@@ -18,7 +18,7 @@
             <div class="col-md-4">
               <div class="card crop-img">
                 <div class="card-body">
-                    <h5 class="card-tittle text-center">INPUT STATUS</h5>    
+                    <h5 class="card-tittle text-center">Input Status</h5>    
                 </div> 
                 {{-- end card body --}}
 
@@ -98,7 +98,7 @@
 
                 <div class="card-footer bg-white">
                     <div class="d-flex align-items-center px-2">
-                        <i class="bi bi-soundwave" style="font-size: 2rem;"></i>
+                        <i class="bi bi-camera-reels-fill" style="font-size: 2rem;"></i>
                         <div class="card-body text-end">
                             <small class="text-start fw-bold">Service Terpilih</small><br>
                             <small class="text-start fw-bold"><span id="service">{{$snmp->service}}</span></small>

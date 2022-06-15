@@ -32,8 +32,8 @@
 
     <div class="container text-center">
         <div class="row pt-4 gx-4 gy-4 table-responsive">
-            <table class="table table-stripe">
-                <thead>
+            <table class="table table-bordered">
+                <thead class="bg-dark text-white">
                     <tr>
                         <th class="col-1">No</th>
                         <th>Nama</th>
@@ -43,15 +43,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($gdrive as $drive)
+                    @foreach ($gdrive as $no => $drive)
                     <tr>
-                        <td align="center">{{$drive->id}}</td>
+                        <td align="center">{{ $no + $gdrive->firstItem() }}</td>
                         <td align="center">{{$drive->nama_file}}</td>
                         <td align="center">{{$drive->owner}}</td>
                         <td align="center"><a href="{{$drive->link}}" target="_blank">{{substr($drive->link,35)}}</a></td>
                         <td>
-                            <span class="btn btn-warning text-dark">Edit</span>
-                            <span class="btn btn-danger">Delete</span>
+                            <a href="/data/edit/{{$drive->id}}" class="btn btn-warning">Edit</a>
+                            <a href="/data/delete/{{$drive->id}}" onclick="return confirm('Yakin ingin hapus ? ')" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                     @endforeach

@@ -6,11 +6,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Routing\Controller;
 use App\Models\channel;
 use App\Models\gdrive;
-use Illuminate\Validation\Rules\Unique;
-use Illuminate\Support\Facades\Http;
 use GuzzleHttp\Client;
 use RealRashid\SweetAlert\Facades\Alert;
-use App\Models\ird;
 
 
 class chnController extends Controller
@@ -120,5 +117,30 @@ class chnController extends Controller
         $gdrive->save();
         Alert::success('input successful', 'Thank You');
         return redirect('/data');
+    }
+    public function gdriveedit($id)
+    {
+        $gdrive=gdrive::find($id);
+        return view('gdrive/edit_gdrive',compact('gdrive'));
+    }
+    public function gdriveeditPost($id, Request $request)
+    {
+        $gdrive=gdrive::find($id);
+        $gdrive->nama_file=$request->nama;
+        $gdrive->owner=$request->owner;
+        $gdrive->link=$request->link;
+        $gdrive->update();
+        Alert::success('edit successful', 'Thank You');
+        return redirect('/data')->with('berhasil','berhasil ubah data');
+    }
+    public function gdriveDelete($id)
+    {
+        $gdrive=gdrive::find($id);
+         if ($gdrive === null) {
+            return redirect('/')->with('bandel', 'id tidak di temukan');
+        }
+        $gdrive->delete();
+        Alert::success('Delete successful', 'Thank You');
+        return redirect()->back();
     }
 }

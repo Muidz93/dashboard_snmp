@@ -23,9 +23,9 @@
                   @csrf     
                   <h1 class="h3 mb-3 fw-normal text-center">Please Login</h1>
                   <div class="form-floating">
-                    <input type="email" name = "email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" autofocus required>
-                    <label for="email">Email address</label>
-                    @error('email')
+                    <input type="name" name = "name" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="name@example.com" autofocus required>
+                    <label for="name">username</label>
+                    @error('name')
                       <div class="invalid-feedback">
                         {{ $message }}
                       </div>
