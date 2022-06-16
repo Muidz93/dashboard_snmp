@@ -2,9 +2,15 @@
     background-color:black;
     background-size: cover;
     padding-top: 8%;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
     color:white;
 }
+@media(max-width:450px) {
+    .banner {
+      padding-top: 23%;
+      padding-bottom: 5%;
+    }
+  }
 
 .crop-img{
     object-fit: cover;

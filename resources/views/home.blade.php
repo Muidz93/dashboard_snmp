@@ -63,6 +63,7 @@
             <thead class="bg-dark text-white">
                 <tr>
                     <th>List IRD</th>
+                    <th>Alamat IP</th>
                     <th>Satelit</th>
                     <th>IP Input</th>
                     <th>Status Video</th>
@@ -76,6 +77,7 @@
               @foreach ($snmp as $rsp)
               <tr>
                 <th scope="row">IRD {{$no}}</th>
+                <th>{{$rsp->ip_control}}</th>
                 <td><span id="status_sat{{$no}}">{{$rsp->status_sat}}</span></td>
                 <td><span id="status_ip{{$no}}">{{$rsp->status_ip}}</span></td>
                 <td><span id="status_video{{$no}}">{{$rsp->status_video}}</span></td>

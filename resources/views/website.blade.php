@@ -1,29 +1,29 @@
 @include('header')
 <style type="text/css">
+
             .img-icon {
                 /* border-radius: 50%; */
                 /* margin-right: 60px;
                 margin-top: 20px; */
                 width:100px;
                 height:100px;
-                margin-top:30px;
-                margin-left:30px;
+                margin: auto;
+                /* margin: 10% 10% 10% 10%; */
+                
+
             }
             .bg-icon:hover{
                 box-shadow: 1px 10px 10px #ccc;
             }
             .bg-icon{
-                width:170px;
-                height:170px;
+                /* width: 20%;
+                height: 20%; */
                 background-color:#fcfcfc;
                 /* border-radius:80%; */
+                margin: 6% 4% 6% 4%;
+           
             }
-            @media(max-width:450px) {
-                .bg-icon{
-                margin-left:0;
-                margin-right:0;
-                }
-            }
+
         </style>
 <!-- banner -->
 <div class="container-fluid banner">
@@ -33,37 +33,37 @@
 </div>
 <!-- Data IRD -->
 <div class="container border my-3">
-    <div class="row mx-auto">
-            <div class=" bg-icon mx-5 my-4">
+    <div class="row">
+            <div class=" bg-icon col ">
                 <a class="text-decoration-none" href="http://36.89.207.251:8001/" target="_blank">
-                    <img src="{{asset('images/logo/favicon.png')}}" class="img-icon " width="80">
+                    <img src="{{asset('images/logo/favicon.png')}}" class="img-icon d-flex align-content-center">
                     <p class="text-center text-black">Serah Terima Barang</p>
                 </a>
             </div>
-            <div class=" bg-icon mx-5 my-4">
+            <div class=" bg-icon col">
             <a class="text-decoration-none" href="http://36.89.207.251:894/" target="_blank">
-                <img src="{{asset('images/logo/prtg.png')}}" class="img-icon " width="80">
+                <img src="{{asset('images/logo/prtg.png')}}" class="img-icon d-flex align-content-center">
                 <p class="text-center text-black">PRTG</p>
             </a>
             </div>
-            <div class=" bg-icon mx-5 my-4">
+            <div class=" bg-icon col">
             <a class="text-decoration-none" href="http://36.89.207.251:8002/" target="_blank">
-                <img src="{{asset('images/logo/ms.png')}}" class="img-icon " width="80">
+                <img src="{{asset('images/logo/ms.png')}}" class="img-icon d-flex align-content-center">
                 <p class="text-center text-black">Monitoring Suhu</p>
             </a>
             </div>
-            <div class=" bg-icon mx-5 my-4">
+            <div class=" bg-icon col">
             <a class="text-decoration-none" href="http://36.89.207.251:881/cacti" target="_blank">
-                <img src="{{asset('images/logo/m_logo.png')}}" class="img-icon " width="80">
+                <img src="{{asset('images/logo/m_logo.png')}}" class="img-icon d-flex align-content-center">
                 <p class="text-center text-black">Cacti</p>
             </a>
             </div>
-            <!-- <div class=" bg-icon mx-5 my-4">
+            <!-- <div class=" bg-icon col">
             <a href="" target="_blank">
                 <img src="" class="img-icon ">
             </a>
             </div>
-            <div class=" bg-icon mx-5 my-4">
+            <div class=" bg-icon col">
             <a href="" target="_blank">
                 <img src="" class="img-icon ">
             </a>
