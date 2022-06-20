@@ -9,14 +9,12 @@
 <!-- Data IRD -->
 <div class="container-fluid pt-5 pb-5 bg-light">
     <div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <a href="/input">
-                <span class="badge bg-success">Tambah Data +</span>
-            </a>
-        </div>
+        <a href="/input">
+            <span class="btn btn-success">Tambah Data +</span>
+        </a>
 
-        <div class="col-md-4 ms-auto">
+    </div>
+    <div class="container">
             <form action="/list_ird">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search...." name="search"
@@ -25,8 +23,6 @@
                 </div>
             </form>
         </div>
-    </div>
-</div>
 
 
 
@@ -74,5 +70,4 @@
     </div>
 </div>
 <script src="{{ mix('js/app.js') }}"></script>
-
 @include('footer')

@@ -10,11 +10,25 @@
 <!-- Data Channel -->
 <div class="container-fluid pt-5 pb-5 bg-light">
     <div class="container">
-        <a href="/channel">
-            <span class="badge bg-success">Tambah Data +</span>
-        </a>
+    <div class="row">
+        <div class="col-md-6 my-2">
+            <a href="/input">
+                <span class="btn btn-success">Tambah Data +</span>
+            </a>
+        </div>
 
+        <div class="col-md-4 ms-auto">
+            <form action="/channels">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search...." name="search"
+                    value="{{ request('search') }}">
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </div>
+            </form>
+        </div>
     </div>
+</div>
+    
 
     <div class="container text-center">
         <div class="row pt-4 gx-4 gy-4 table-responsive">
@@ -55,8 +69,8 @@
                             <td align="center">{{ $cn->multicast }}</td>
                             <td align="center">{{ $cn->port }}</td>
                             <td>
-                                <a href="/channel/edit/{{$cn->id}}"><span class="badge bg-warning text-dark">Edit</span></a>
-                                <a href="/channel/hapus/{{$cn->id}}" onclick="return confirm('yakin ingin hapus? ')"><span class="badge bg-danger">Delete</span></a>
+                                <a href="/channel/edit/{{$cn->id}}"><span class="btn btn-warning text-dark">Edit</span></a>
+                                <a href="/channel/hapus/{{$cn->id}}" onclick="return confirm('yakin ingin hapus? ')"><span class="btn btn-danger">Delete</span></a>
                             </td>
                             
                         </tr>

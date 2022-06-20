@@ -58,6 +58,12 @@
                 <p class="text-center text-black">Cacti</p>
             </a>
             </div>
+             <div class=" bg-icon col">
+            <a class="text-decoration-none" href="http://192.168.2.3/index.php/login" target="_blank">
+                <img src="{{asset('images/logo/nextcloud.png')}}" class="img-icon d-flex align-content-center">
+                <p class="text-center text-black">Nextcloud</p>
+            </a>
+            </div>
             <!-- <div class=" bg-icon col">
             <a href="" target="_blank">
                 <img src="" class="img-icon ">
@@ -70,7 +76,5 @@
             </div> -->
         </div>
     </div>
-
 <script src="{{ mix('js/app.js') }}"></script>
-
 @include('footer')

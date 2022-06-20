@@ -1,6 +1,6 @@
 @include('header')
 
-<div class=" justify-content-center"> {{-- row membuat keluar viewport --}}
+<div class=" tengah"> {{-- row membuat keluar viewport --}}
     <div class="col-md-3">
         <div class="container mt-5 pt-5 pb-5 ">
             <main class="form-input">
@@ -108,4 +108,5 @@
             </div>
     </div>
 </div>
+<script src="{{ mix('js/app.js') }}"></script>
 @include('footer')

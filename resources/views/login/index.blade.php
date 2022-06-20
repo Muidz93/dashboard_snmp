@@ -45,4 +45,5 @@
             </div>
     </div>
 </div>
+<script src="{{ mix('js/app.js') }}"></script>
 @include('footer')

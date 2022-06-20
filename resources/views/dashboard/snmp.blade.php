@@ -6,10 +6,10 @@
         <h4 class="display-6 mt-3 mb-3">Monitoring IRD LIVE</h4>
     </div>
 </div>
-<div class="container mt-3">
-<a href="/" class="btn btn-success">Kembali</a>
+<div class="container my-3">
+<a href="/" class="btn btn-success"><i class="bi bi-arrow-left"></i></a>
 </div>
-<div class="container-fluid py-5 bg-light">
+<div class="container-fluid bg-light">
     <div class="container text-center">
       <h2 class="display-6" id="channel">IRD Live {{$snmp->id}}</h2>
       <div class="row pt-4 gx-4 gy-4">

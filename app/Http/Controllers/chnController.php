@@ -14,8 +14,10 @@ class chnController extends Controller
 {
     public function readData()
     {
-        $channels = DB::table('channels')->get();
-        return view('channel',compact('channels')); 
+        // $channels = DB::table('channels')->get();
+        return view('channel',[
+            "channels" => channel::latest()->filter(request(['search']))->paginate(5)->withQueryString()
+        ]);
     }
 
     public function input()
@@ -55,7 +57,6 @@ class chnController extends Controller
         $chn -> multicast = $request -> multicast;
         $chn -> port = $request -> port;
         $chn -> save($validatedData);
-
         return redirect('channel');
     }
     public function hapus($id)
