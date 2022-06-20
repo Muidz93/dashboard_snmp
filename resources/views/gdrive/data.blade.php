@@ -43,18 +43,26 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($gdrive as $no => $drive)
-                    <tr>
-                        <td align="center">{{ $no + $gdrive->firstItem() }}</td>
-                        <td align="center">{{$drive->nama_file}}</td>
-                        <td align="center">{{$drive->owner}}</td>
-                        <td align="center"><a href="{{$drive->link}}" target="_blank">{{substr($drive->link,35)}}</a></td>
-                        <td>
-                            <a href="/data/edit/{{$drive->id}}" class="btn btn-warning">Edit</a>
-                            <a href="/data/delete/{{$drive->id}}" onclick="return confirm('Yakin ingin hapus ? ')" class="btn btn-danger">Delete</a>
-                        </td>
-                    </tr>
-                    @endforeach
+                    @if ($gdrive->count())
+                        @foreach ($gdrive as $no => $drive)
+                        <tr>
+                            <td align="center">{{ $no + $gdrive->firstItem() }}</td>
+                            <td align="center">{{$drive->nama_file}}</td>
+                            <td align="center">{{$drive->owner}}</td>
+                            <td align="center"><a href="{{$drive->link}}" target="_blank">{{substr($drive->link,35)}}</a></td>
+                            <td>
+                                <a href="/data/edit/{{$drive->id}}" class="btn btn-warning">Edit</a>
+                                <a href="/data/delete/{{$drive->id}}" onclick="return confirm('Yakin ingin hapus ? ')" class="btn btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                        @endforeach
+                    @else
+                        <tr>
+                            <td colspan="5" align="center">
+                                <h3>Data Not Found</h3>
+                            </td>
+                        </tr>
+                    @endif
                 </tbody>
             </table>
         </div>

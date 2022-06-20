@@ -40,12 +40,15 @@ route::group(['middleware' => ['auth']], function () {
     Route::post('/channel', [chnController::class, 'store']);
     Route::post('/test', [chnController::class, 'http_get']);
     Route::get('/website', [chnController::class, 'website']);
+    Route::get('/website/add', [chnController::class, 'websiteAdd']);
+    Route::post('/website/add', [chnController::class, 'websitePost']);
+    Route::get('/website/delete/{id}', [chnController::class, 'websiteDelete']);
     Route::get('/data', [chnController::class, 'data']);
     Route::get('/data/add', [chnController::class, 'gdrive']);
     Route::post('/data/add', [chnController::class, 'gdrivepost']);
     Route::get('/data/edit/{id}', [chnController::class, 'gdriveedit']);
     Route::post('/data/edit/{id}', [chnController::class, 'gdriveeditPost']);
-    Route::post('/data/delete/{id}', [chnController::class, 'gdriveDelete']);
+    Route::get('/data/delete/{id}', [chnController::class, 'gdriveDelete']);
 });
 Route::post('/login', [loginController::class, 'authenticate']);
 Route::post('/logout', [loginController::class, 'logout']);

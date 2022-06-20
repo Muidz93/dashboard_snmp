@@ -9,13 +9,15 @@
 <!-- Data IRD -->
 <div class="container-fluid pt-5 pb-5 bg-light">
     <div class="container">
-        <a href="/input">
-            <span class="btn btn-success">Tambah Data +</span>
-        </a>
+    <div class="row">
+        <div class="col-md-6 my-2">
+            <a href="/input">
+                <span class="btn btn-success">Tambah Data +</span>
+            </a>
+        </div>
 
-    </div>
-    <div class="container">
-            <form action="/list_ird">
+        <div class="col-md-4 ms-auto">
+            <form action="/channels">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search...." name="search"
                     value="{{ request('search') }}">
@@ -23,7 +25,8 @@
                 </div>
             </form>
         </div>
-
+    </div>
+</div>
 
 
     <div class="container text-center">
@@ -54,8 +57,8 @@
                             <td align="center">{{ $rd->owner }}</td>
                             <td align="center">{{ $rd->channel }}</td>
                             <td>
-                                <span class="badge bg-warning text-dark">Edit</span>
-                                <span class="badge bg-danger">Delete</span>
+                                <a href="#" class="btn btn-warning text-dark">Edit</a>
+                                <a href="#" class="btn btn-danger">Delete</a>
                             </td>
                             
                         </tr>

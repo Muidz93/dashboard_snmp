@@ -32,7 +32,7 @@
               <p class="card-text text-center">{{ $hitung }} Unit</p>
           </div>
           <div class="card-footer bg-white">
-            <small class="text-start fw-bold">{{ $hd }} HD, {{ $sd }} SD</small>
+            {{-- <small class="text-start fw-bold">{{ $hd }} HD, {{ $sd }} SD</small> --}}
           </div>
         </div>
       </div>
@@ -44,7 +44,7 @@
               <p class="card-text text-center">{{ $hitung }} Unit</p>
           </div>
             <div class="card-footer bg-white">
-              <small class="text-start fw-bold">{{ $hd }} HD, {{ $sd }} SD</small>
+              {{-- <small class="text-start fw-bold">{{ $hd }} HD, {{ $sd }} SD</small> --}}
             </div>
         </div>
       </div>

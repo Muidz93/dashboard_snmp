@@ -12,7 +12,7 @@
     <div class="container">
     <div class="row">
         <div class="col-md-6 my-2">
-            <a href="/input">
+            <a href="/channel">
                 <span class="btn btn-success">Tambah Data +</span>
             </a>
         </div>
@@ -52,7 +52,7 @@
                 </thead>
 
                 <tbody>
-                    
+                @if ($channels->count())
                     <?php $no=1; ?>
                 @foreach ($channels as $cn)
                         <tr>
@@ -75,6 +75,13 @@
                             
                         </tr>
                         @endforeach
+                    @else
+                        <tr>
+                            <td colspan="13" align="center">
+                                <h3>Data Not Found</h3>
+                            </td>
+                        </tr>
+                    @endif
                 </tbody>
             </table>
         </div>

@@ -31,16 +31,26 @@
         <h4 class="display-6 mt-3 mb-3">Kumpulan web West Platform</h4>
     </div>
 </div>
+<div class="container">
+    <div class="col-md-6 my-2">
+            <a href="/website/add">
+                <span class="btn btn-success">Tambah web +</span>
+            </a>
+        </div>
+</div>
 <!-- Data IRD -->
 <div class="container border my-3">
     <div class="row">
+        @foreach ($website as $web)
             <div class=" bg-icon col ">
-                <a class="text-decoration-none" href="http://36.89.207.251:8001/" target="_blank">
-                    <img src="{{asset('images/logo/favicon.png')}}" class="img-icon d-flex align-content-center">
-                    <p class="text-center text-black">Serah Terima Barang</p>
+                <a href="website/delete/{{$web->id}}" class="text-decoration-none text-danger" onclick="return confirm('yakin ingin hapus')">X</a>
+                <a class="text-decoration-none" href="{{$web->link}}" target="_blank">
+                    <img src="{{asset('images/logo/'.$web->gambar)}}" class="img-icon d-flex align-content-center">
+                    <p class="text-center text-black">{{$web->nama_web}}</p>
                 </a>
             </div>
-            <div class=" bg-icon col">
+        @endforeach
+            {{-- <div class=" bg-icon col">
             <a class="text-decoration-none" href="http://36.89.207.251:894/" target="_blank">
                 <img src="{{asset('images/logo/prtg.png')}}" class="img-icon d-flex align-content-center">
                 <p class="text-center text-black">PRTG</p>
@@ -63,7 +73,7 @@
                 <img src="{{asset('images/logo/nextcloud.png')}}" class="img-icon d-flex align-content-center">
                 <p class="text-center text-black">Nextcloud</p>
             </a>
-            </div>
+            </div> --}}
             <!-- <div class=" bg-icon col">
             <a href="" target="_blank">
                 <img src="" class="img-icon ">

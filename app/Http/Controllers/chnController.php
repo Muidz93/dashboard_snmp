@@ -8,6 +8,8 @@ use App\Models\channel;
 use App\Models\gdrive;
 use GuzzleHttp\Client;
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Str;
+use App\Models\website;
 
 
 class chnController extends Controller
@@ -97,7 +99,46 @@ class chnController extends Controller
     }
     public function website()
     {
-        return view("website");
+        $website=website::all();
+        return view("website",compact('website'));
+    }
+    public function websiteAdd()
+    {
+        return view("websites/input_website");
+    }
+    public function websitePost(Request $request)
+    {
+        $website = new website;
+        if (website::count() === 0) {
+            $website->id = 1;
+            $usid = $website->id;
+        } else {
+            $user = website::latest()->first();
+            $usid = $user->id + 1;
+        }
+        $file = $request->logo;
+        $slug = Str::slug($request->nama);
+        $filename = $slug . $usid . '.' . $file->extension();
+        $file->move(public_path('images/logo'), $filename);
+        $website->nama_web = $request->nama;
+        $website->gambar = $filename;
+        $website->link = $request->link;
+        $website->save();
+        Alert::success('berhasil masukan data', 'Thank You');
+        return redirect('/website');
+    }
+    public function websiteDelete($id)
+    {
+        $website=website::find($id);
+         if ($website === null) {
+            return redirect('/')->with('bandel', 'id tidak di temukan');
+        }
+        if ($website != "") {
+            unlink(public_path('images/logo') . '\\' . $website->kondisi);
+        }
+        $website->delete();
+        Alert::success('Delete successful', 'Thank You');
+        return redirect()->back();
     }
     public function data()
     {

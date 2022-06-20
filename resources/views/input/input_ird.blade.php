@@ -1,6 +1,6 @@
-@include('input.header')
+@include('header')
 
-<div class="row justify-content-left">
+<div class="tengah">
     <div class="col-lg-7">
         <div class="container mt-5 pt-5 pb-5 ">
             <main class="form-input">
