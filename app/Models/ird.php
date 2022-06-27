@@ -21,7 +21,9 @@ class ird extends Model
             return $query->where('merk', 'like', '%' . $filters['search'] . '%')
                 ->orWhere('control', 'like', '%' . $filters['search']. '%')
                 ->orWhere('sn', 'like', '%' . $filters['search']. '%')
-                ->orWhere('owner', 'like', '%' . $filters['search']. '%') 
+                ->orWhere('owner', 'like', '%' . $filters['search']. '%')
+                ->orWhere('type', 'like', '%' . $filters['search']. '%')
+                ->orWhere('control', 'like', '%' . $filters['search']. '%')
                 ->orWhere('channel', 'like', '%' . $filters['search']. '%');
         }
     }

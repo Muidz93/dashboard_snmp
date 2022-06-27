@@ -49,6 +49,7 @@ route::group(['middleware' => ['auth']], function () {
     Route::get('/data/edit/{id}', [chnController::class, 'gdriveedit']);
     Route::post('/data/edit/{id}', [chnController::class, 'gdriveeditPost']);
     Route::get('/data/delete/{id}', [chnController::class, 'gdriveDelete']);
+    Route::get('/encoder', [chnController::class, 'encoder']);
 });
 Route::post('/login', [loginController::class, 'authenticate']);
 Route::post('/logout', [loginController::class, 'logout']);

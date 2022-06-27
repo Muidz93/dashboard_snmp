@@ -21,7 +21,7 @@
             <main class="form-signin">
                 <form action="/login" method="post">
                   @csrf     
-                  <h1 class="h3 mb-3 fw-normal text-center">Please Login</h1>
+                  <h1 class="h3 mb-3 fw-normal text-center">Login</h1>
                   <div class="form-floating">
                     <input type="name" name = "name" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="name@example.com" autofocus required>
                     <label for="name">username</label>

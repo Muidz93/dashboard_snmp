@@ -134,7 +134,7 @@ class chnController extends Controller
             return redirect('/')->with('bandel', 'id tidak di temukan');
         }
         if ($website != "") {
-            unlink(public_path('images/logo') . '\\' . $website->kondisi);
+            unlink(public_path('images/logo') . '\\' . $website->gambar);
         }
         $website->delete();
         Alert::success('Delete successful', 'Thank You');
@@ -184,5 +184,9 @@ class chnController extends Controller
         $gdrive->delete();
         Alert::success('Delete successful', 'Thank You');
         return redirect()->back();
+    }
+    public function encoder()
+    {
+        return view("encoder/encoder");
     }
 }

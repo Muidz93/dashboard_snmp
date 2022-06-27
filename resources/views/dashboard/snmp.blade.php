@@ -59,7 +59,7 @@
 
                 <div class="card-footer bg-white">
                     <div class="d-flex align-items-center px-2">
-                        <i class="bi bi-valentine" style="font-size: 2rem;"></i>
+                        <i class="bi bi-film" style="font-size: 2rem;"></i>
                         <div class="card-body text-end">
                             <small class="text-start fw-bold">Video Status</small><br>
                             <small class="text-start fw-bold"><span id="status_video">{{$snmp->status_video}}</span></small>
@@ -79,7 +79,7 @@
                 
                 <div class="card-footer bg-white">
                     <div class="d-flex align-items-center px-2">
-                        <i class="bi bi-rss-fill" style="font-size: 2rem;"></i>
+                        <i class="bi bi-reception-4" style="font-size: 2rem;"></i>
                         <div class="card-body text-end">
                             <small class="text-start fw-bold">Video Bitrate</small><br>
                             <small class="text-start fw-bold"><span id="bitrate">{{number_format($snmp->video_bitrate)}}</span> Mbits/s</small>
@@ -100,7 +100,7 @@
                     <div class="d-flex align-items-center px-2">
                         <i class="bi bi-camera-reels-fill" style="font-size: 2rem;"></i>
                         <div class="card-body text-end">
-                            <small class="text-start fw-bold">Service Terpilih</small><br>
+                            <small class="text-start fw-bold">PID Service yang terpilih</small><br>
                             <small class="text-start fw-bold"><span id="service">{{$snmp->service}}</span></small>
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                   <div class="d-flex align-items-center px-2">
                       <i class="bi bi-soundwave" style="font-size: 2rem;"></i>
                       <div class="card-body text-end">
-                          <small class="text-start fw-bold">AUDIO 1 Terpilih</small><br>
+                          <small class="text-start fw-bold">PID Audio 1 terpilih</small><br>
                           <small class="text-start fw-bold"><span id="pid_audio1">{{$snmp->PID_audio}}</span></small>
                       </div>
                   </div>
@@ -120,7 +120,7 @@
                     <div class="d-flex align-items-center px-2">
                         <i class="bi bi-soundwave" style="font-size: 2rem;"></i>
                         <div class="card-body text-end">
-                            <small class="text-start fw-bold">AUDIO 2 Terpilih</small><br>
+                            <small class="text-start fw-bold">PID Audio 2 terpilih</small><br>
                             <small class="text-start fw-bold"><span id="pid_audio2">{{$snmp->PID_audio2}}</span></small>
                         </div>
                     </div>

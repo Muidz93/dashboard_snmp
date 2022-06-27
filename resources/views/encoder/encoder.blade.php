@@ -3,7 +3,7 @@
 <!-- banner -->
 <div class="container-fluid banner">
     <div class="container text-center">
-        <h4 class="display-6 mt-3 mb-3">Master Data IRD</h4>
+        <h4 class="display-6 mt-3 mb-3">Master Data Encoder</h4>
     </div>
 </div>
 <!-- Data IRD -->
@@ -17,7 +17,7 @@
         </div>
 
         <div class="col-md-4 ms-auto">
-            <form action="/list_ird">
+            <form action="/encoder">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search...." name="search"
                     value="{{ request('search') }}">
@@ -46,30 +46,27 @@
                 </thead>
 
                 <tbody>
-                    
-                @foreach ($irds as $no => $rd)
                         <tr>
-                            <td align="center">{{ $no + $irds->firstItem() }}</td>
-                            <td align="center">{{ $rd->merk }}</td>
-                            <td align="center">{{ $rd->type }}</td>
-                            <td align="center">{{ $rd->sn }}</td>
-                            <td align="center">{{ $rd->control }}</td>
-                            <td align="center">{{ $rd->owner }}</td>
-                            <td align="center">{{ $rd->channel }}</td>
+                            <td align="center">1</td>
+                            <td align="center">Dypsis</td>
+                            <td align="center">28xee</td>
+                            <td align="center">123szd12</td>
+                            <td align="center">10.0.0.1</td>
+                            <td align="center">Magna</td>
+                            <td align="center">-</td>
                             <td>
                                 <a href="#" class="btn btn-warning text-dark">Edit</a>
                                 <a href="#" class="btn btn-danger">Delete</a>
                             </td>
                             
                         </tr>
-                        @endforeach
                 </tbody>
             </table>
         </div>
     </div>
     
     <div class="d-flex justify-content-end">
-        {{ $irds->links() }}
+        {{-- {{ $irds->links() }} --}}
     </div>
 </div>
 <script src="{{ mix('js/app.js') }}"></script>

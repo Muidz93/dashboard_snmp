@@ -33,7 +33,7 @@
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="/channels">Channels</a></li>
                   <li><a class="dropdown-item" href="/list_ird">IRD</a></li>
-                  <li><a class="dropdown-item" href="#">Encoder</a></li>
+                  <li><a class="dropdown-item" href="/encoder">Encoder</a></li>
                   <li><a class="dropdown-item" href="#">Jgater</a></li>
                   <li><a class="dropdown-item" href="#">SmartCard</a></li>
                 </ul>

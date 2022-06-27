@@ -13,6 +13,7 @@
     <h2 class="display-6" id="channel">Dashboard UseeTV</h2>
     <div class="row pt-4 gx-4 gy-4">
       <div class="col-md-4 ">
+        <a href="/channels" class="text-decoration-none text-black">
         <div class="card crop-img">
           <i class="bi bi-broadcast-pin" style="font-size: 5rem;"></i>
             <div class="card-body">
@@ -23,8 +24,10 @@
             <small class="text-start fw-bold">{{ $hd }} HD, {{ $sd }} SD</small>
           </div>
         </div>
+        </a>
       </div>
       <div class="col-md-4 ">
+        <a href="/list_ird" class="text-decoration-none text-black">
         <div class="card crop-img">
           <i class="bi bi-box2-fill" style="font-size: 5rem;"></i>
           <div class="card-body">
@@ -35,8 +38,10 @@
             {{-- <small class="text-start fw-bold">{{ $hd }} HD, {{ $sd }} SD</small> --}}
           </div>
         </div>
+        </a>
       </div>
       <div class="col-md-4 ">
+        <a href="/encoder" class="text-decoration-none text-black">
         <div class="card crop-img">
           <i class="bi bi-boombox-fill" style="font-size: 5rem;"></i>
           <div class="card-body">
@@ -47,6 +52,7 @@
               {{-- <small class="text-start fw-bold">{{ $hd }} HD, {{ $sd }} SD</small> --}}
             </div>
         </div>
+        </a>
       </div>
     </div>  
   </div>
@@ -67,6 +73,7 @@
                     <th>Satelit</th>
                     <th>IP Input</th>
                     <th>Status Video</th>
+                    <th>Service</th>
                     {{-- <th>Margin</th>
                     <th>Bitrate</th> --}}
                     <th class="col-2">Realtime</th>
@@ -81,6 +88,7 @@
                 <td><span id="status_sat{{$no}}">{{$rsp->status_sat}}</span></td>
                 <td><span id="status_ip{{$no}}">{{$rsp->status_ip}}</span></td>
                 <td><span id="status_video{{$no}}">{{$rsp->status_video}}</span></td>
+                <td><span id="service{{$no}}">{{$rsp->service}}</span></td>
                 {{-- <td><span id="margin{{$no}}">{{$rsp->margin}}</span> dB</td>
                 <td><span id="bitrate{{$no}}">{{$rsp->video_bitrate}}</span></td> --}}
                 <td>
