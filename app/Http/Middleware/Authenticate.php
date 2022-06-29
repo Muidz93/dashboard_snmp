@@ -15,6 +15,7 @@ class Authenticate extends Middleware
     protected function redirectTo($request)
     {
         if (! $request->expectsJson()) {
+            toast('Gagal, Anda belum Login', 'error');
             return route('login');
         }
     }
