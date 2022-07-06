@@ -63,6 +63,7 @@
   <div class="container text-center">
     <h2 class="display-6" id="#">Monitoring Status IRD Live</h2>
     <a href="/" class="btn btn-warning"><i class="bi bi-arrow-clockwise"></i></a>
+    <a href="/irdlive/add" class="btn btn-success"><i class="bi bi-plus"></i></a>
     <div class="row pt-4 gx-4 gy-4">
       <div class="table-responsive">
         <table class="table table-stripe table-hover">

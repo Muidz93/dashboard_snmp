@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Routing\Controller;
 use App\Models\channel;
 use App\Models\gdrive;
+use App\Models\snmp;
 use GuzzleHttp\Client;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Str;
@@ -18,14 +19,15 @@ class chnController extends Controller
     {
         // $channels = DB::table('channels')->get();
         return view('channel',[
-            "channels" => channel::latest()->filter(request(['search']))->paginate(5)->withQueryString()
+            "channels" => channel::latest()->filter(request(['search']))->paginate(5)->withQueryString(),
+            "title"=>'channels'
         ]);
     }
 
     public function input()
     {
         return view('channels.input_chn', [
-            'title'=>'Input Channel'
+            'title'=>'Input_Channel'
         ]);
     }
 
@@ -73,7 +75,9 @@ class chnController extends Controller
     public function edit($id)
     {
         $channel=channel::find($id);
-        return view('channels.edit',compact('channel'));
+        return view('channels.edit',compact('channel'),[
+            'title'=>"edit_ird"
+        ]);
     }
     public function postEdit($id,Request $request)
     {
@@ -95,16 +99,22 @@ class chnController extends Controller
     }
     public function err($er)
     {
-        return view('error', compact('er'));
+        return view('error', compact('er'),[
+            'title'=>"error"
+        ]);
     }
     public function website()
     {
         $website=website::all();
-        return view("website",compact('website'));
+        return view("website",compact('website'),[
+            "title"=>'website'
+        ]);
     }
     public function websiteAdd()
     {
-        return view("websites/input_website");
+        return view("websites/input_website",[
+            'title'=>"website_add"
+        ]);
     }
     public function websitePost(Request $request)
     {
@@ -143,12 +153,15 @@ class chnController extends Controller
     public function data()
     {
         return view('gdrive/data',[
-            "gdrive" => gdrive::latest()->filter(request(['search']))->paginate(5)->withQueryString()
+            "gdrive" => gdrive::latest()->filter(request(['search']))->paginate(5)->withQueryString(),
+            "title"=>'data'
         ]);
     }
     public function gdrive()
     {
-        return view('gdrive/input_gdrive');
+        return view('gdrive/input_gdrive',[
+            'title'=>"input_gdrive"
+        ]);
     }
     public function gdrivepost(Request $request)
     {
@@ -163,7 +176,9 @@ class chnController extends Controller
     public function gdriveedit($id)
     {
         $gdrive=gdrive::find($id);
-        return view('gdrive/edit_gdrive',compact('gdrive'));
+        return view('gdrive/edit_gdrive',compact('gdrive'),[
+            'title'=>"detail_gdrive"
+        ]);
     }
     public function gdriveeditPost($id, Request $request)
     {
@@ -187,6 +202,27 @@ class chnController extends Controller
     }
     public function encoder()
     {
-        return view("encoder/encoder");
+        return view("encoder/encoder",["title"=>"encoder"]);
+    }
+    public function irdLiveAdd()
+    {
+        return view('input_irdlive',['title'=>'inputIrd']);
+    }
+    public function irdLivePost(Request $request)
+    {
+        $snmp=new snmp;
+        $snmp->ip_control=$request->ipcontrol;
+        $snmp->video_bitrate=0;
+        $snmp->kualitas=0;
+        $snmp->status_sat="DISCONNECTED";
+        $snmp->margin=0;
+        $snmp->status_ip="DISCONNECTED";
+        $snmp->service="DISCONNECTED";
+        $snmp->status_video="DISCONNECTED";
+        $snmp->ts_bitrate=0;
+        $snmp->PID_audio="DISCONNECTED";
+        $snmp->PID_audio2="DISCONNECTED";
+        $snmp->save();
+        return redirect('/');
     }
 }

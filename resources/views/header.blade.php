@@ -26,23 +26,26 @@
           <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
             @auth
             <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link {{ $title === 'home' ? 'active' : '' }}" href="/">Home</a>
+              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#masterdata" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dashboard
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/channels">Channels</a></li>
-                  <li><a class="dropdown-item" href="/list_ird">IRD</a></li>
-                  <li><a class="dropdown-item" href="/encoder">Encoder</a></li>
-                  <li><a class="dropdown-item" href="#">Jgater</a></li>
-                  <li><a class="dropdown-item" href="#">SmartCard</a></li>
+                  <li><a class="dropdown-item  {{ $title === 'channels' ? 'bg-dark text-white' : '' }}" href="/channels">Channels</a></li>
+                  <li><a class="dropdown-item {{ $title === 'list_ird' ? 'bg-dark text-white' : '' }}" href="/list_ird">IRD</a></li>
+                  <li><a class="dropdown-item {{ $title === 'encoder' ? 'bg-dark text-white' : '' }}" href="/encoder">Encoder</a></li>
+                  <li><a class="dropdown-item {{ $title === 'jgater' ? 'bg-dark text-white' : '' }}" href="#">Jgater</a></li>
+                  <li><a class="dropdown-item {{ $title === 'smartcard' ? 'bg-dark text-white' : '' }}" href="#">SmartCard</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/website">Website</a>
+                <a class="nav-link {{ $title === 'website' ? 'active' : '' }}" href="/website">Website</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/data">Data</a>
+                <a class="nav-link {{ $title === 'data' ? 'active' : '' }}" href="/data">Data</a>
               </li>
             </ul>
             @endauth

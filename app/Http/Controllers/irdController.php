@@ -17,7 +17,8 @@ class irdController extends Controller
         return view('list_ird',[
             "title" => "List IRD",
             "active" => 'list_ird',
-            "irds" => ird::latest()->filter(request(['search']))->paginate(5)->withQueryString()
+            "irds" => ird::latest()->filter(request(['search']))->paginate(5)->withQueryString(),
+            "title"=>'list_ird'
         ]);
     }
 
@@ -25,7 +26,7 @@ class irdController extends Controller
     {
         $irds = new ird;
         return view('input.input_ird', compact('irds'), [
-            'title' => 'Input IRD'
+            'title' => 'Input_IRD'
         ]);
     }
 
@@ -80,7 +81,9 @@ class irdController extends Controller
         // ]);
 
         // $responseBody = json_decode($response->getBody());
-        return view('home',compact('hd','hitung', 'harmonic','sd','chn','ericsson','snmp'));
+        return view('home',compact('hd','hitung', 'harmonic','sd','chn','ericsson','snmp'),[
+            'title'=>"home"
+        ]);
     }
 
    public function detail($id)
@@ -89,6 +92,8 @@ class irdController extends Controller
         if ($snmp === null) {
             return redirect('/')->with('bandel', 'bandel');
         }
-       return view('dashboard.snmp',compact('snmp'));
+       return view('dashboard.snmp',compact('snmp'),[
+            'title'=>"detail_ird"
+        ]);
    }
 }
