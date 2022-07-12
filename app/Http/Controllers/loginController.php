@@ -37,8 +37,6 @@ class loginController extends Controller
         }else{
             return back() -> with('loginError', 'Login Failed!');
         }
-
-
     }
 
     public function logout(Request $request)

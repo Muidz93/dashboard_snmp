@@ -52,8 +52,6 @@ route::group(['middleware' => ['auth']], function () {
     Route::get('/encoder', [chnController::class, 'encoder']);
     Route::get('/irdlive/add', [chnController::class, 'irdLiveAdd']);
     Route::post('/irdlive/add', [chnController::class, 'irdLivePost']);
-
-
 });
 Route::post('/login', [loginController::class, 'authenticate']);
 Route::post('/logout', [loginController::class, 'logout']);

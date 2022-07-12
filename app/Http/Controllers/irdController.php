@@ -17,7 +17,7 @@ class irdController extends Controller
         return view('list_ird',[
             "title" => "List IRD",
             "active" => 'list_ird',
-            "irds" => ird::latest()->filter(request(['search']))->paginate(5)->withQueryString(),
+            "irds" => ird::latest()->filter(request(['search']))->paginate(10)->withQueryString(),
             "title"=>'list_ird'
         ]);
     }

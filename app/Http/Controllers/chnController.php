@@ -19,7 +19,7 @@ class chnController extends Controller
     {
         // $channels = DB::table('channels')->get();
         return view('channel',[
-            "channels" => channel::latest()->filter(request(['search']))->paginate(5)->withQueryString(),
+            "channels" => channel::latest()->filter(request(['search']))->paginate(10)->withQueryString(),
             "title"=>'channels'
         ]);
     }
@@ -153,7 +153,7 @@ class chnController extends Controller
     public function data()
     {
         return view('gdrive/data',[
-            "gdrive" => gdrive::latest()->filter(request(['search']))->paginate(5)->withQueryString(),
+            "gdrive" => gdrive::latest()->filter(request(['search']))->paginate(10)->withQueryString(),
             "title"=>'data'
         ]);
     }
