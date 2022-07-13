@@ -24,6 +24,7 @@ class CreateSnmpsTable extends Migration
             $table->string('service');
             $table->string('kualitas');
             $table->string('status_video');
+            $table->float('temperature');
             $table->string('PID_audio');
             $table->string('PID_audio2');
             $table->timestamps();
