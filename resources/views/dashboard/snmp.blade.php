@@ -12,6 +12,9 @@
 <div class="container-fluid bg-light">
     <div class="container text-center">
       <h2 class="display-6" id="channel">IRD Live {{$snmp->id}}</h2>
+      <div class="d-flex justify-content-center">
+      <i class="bi bi-thermometer-low" style="font-size: 1.5rem;"></i><div class="my-auto"><span id="temperature">{{$snmp->temperature}} C</span></div>
+      </div>
       <div class="row pt-4 gx-4 gy-4">
         <hr>
             {{-- Input Status --}}
@@ -141,6 +144,7 @@
                 $('#margin-bar').css({"width":$margin+'%'});
                 $margin < 30 ? $('#margin-bar').css({"background-color": "red"}) : $('#margin-bar').css({"background-color": "blue"}) 
                 $('#bitrate').load(location.href + ' #bitrate' );
+                $('#temperature').load(location.href + ' #temperature' );
                 $('#ts_bitrate').load(location.href + ' #ts_bitrate' );
                 $('#status_sat').load(location.href + ' #status_sat' );
                 $('#status_ip').load(location.href + ' #status_ip' );
