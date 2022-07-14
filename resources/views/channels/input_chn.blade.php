@@ -4,7 +4,7 @@
     <div class="col-lg-7">
         <div class="container mt-5 pt-5 pb-5 ">
             <main class="form-input">
-                <form action="/channels" method="post">  
+                <form action="/channel" method="post">  
                     @csrf   
                   <h1 class="h3 mb-3 fw-normal text-center">Input Channel</h1>
                   <div class="form-floating">
