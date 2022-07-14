@@ -61,7 +61,7 @@ class chnController extends Controller
         $chn -> multicast = $request -> multicast;
         $chn -> port = $request -> port;
         $chn -> save($validatedData);
-        return redirect('channel');
+        return redirect('/channels');
     }
     public function hapus($id)
     {
