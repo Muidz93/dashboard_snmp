@@ -34,7 +34,7 @@ class chnController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'nmr' => 'required|unique:channels',
+            'nmr' => 'required|unique:channels|numeric|min:2',
             'nama_chn' => 'required',
             'kualitas' => 'required',
             'downlink' => 'required',
