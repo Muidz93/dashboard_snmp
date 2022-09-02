@@ -62,8 +62,8 @@
 <div class="container-fluid pt-5 pb-2 bg-light">
   <div class="container text-center">
     <h2 class="display-6" id="#">Monitoring Status IRD Live</h2>
-    <a href="/" class="btn btn-warning"><i class="bi bi-arrow-clockwise"></i></a>
-    <a href="/irdlive/add" class="btn btn-success"><i class="bi bi-plus"></i></a>
+    {{-- <a href="/" class="btn btn-warning"><i class="bi bi-arrow-clockwise"></i></a>
+    <a href="/irdlive/add" class="btn btn-success"><i class="bi bi-plus"></i></a> --}}
     <div class="row pt-4 gx-4 gy-4">
       <div class="table-responsive">
         <table class="table table-stripe table-hover">
@@ -107,19 +107,21 @@
   </div>
 </div>
 <script src="{{ mix('js/app.js') }}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script type="text/javascript">
-  // $(document).ready(function() {
-  //           setInterval(function() {
-  //             for (let index = 1; index <= 6; index++) {
-  //               $('#status_sat'+index).load(location.href + ' #status_sat'+index );
-  //               $('#status_ip'+index).load(location.href + ' #status_ip'+index );
-  //               $('#status_video'+index).load(location.href + ' #status_video'+index );
-  //               $('#status_sat'+index).text() == "LOCKED" ?  $('#status_sat'+index).css({"color":"green"}) : $('#status_sat'+index).css({"color":"red"}); 
-  //               $('#status_ip'+index).text() == "LOCKED" ?  $('#status_ip'+index).css({"color":"green"}) : $('#status_ip'+index).css({"color":"red"}); 
-  //               $('#status_video'+index).text() == "Video Running" ?  $('#status_video'+index).css({"color":"green"}) : $('#status_video'+index).css({"color":"red"}); 
-  //               }
-  //             // $("#test").load("snmp/ird.php").text();
-  //           }, 1000);
-  //       });
+  $(document).ready(function() {
+            setInterval(function() {
+              // for (let index = 1; index <= 6; index++) {
+              //   $('#status_sat'+index).load(location.href + ' #status_sat'+index );
+              //   $('#status_ip'+index).load(location.href + ' #status_ip'+index );
+              //   $('#status_video'+index).load(location.href + ' #status_video'+index );
+              //   $('#status_sat'+index).text() == "LOCKED" ?  $('#status_sat'+index).css({"color":"green"}) : $('#status_sat'+index).css({"color":"red"}); 
+              //   $('#status_ip'+index).text() == "LOCKED" ?  $('#status_ip'+index).css({"color":"green"}) : $('#status_ip'+index).css({"color":"red"}); 
+              //   $('#status_video'+index).text() == "Video Running" ?  $('#status_video'+index).css({"color":"green"}) : $('#status_video'+index).css({"color":"red"}); 
+              //   }
+              // $("#test").load("snmp/ird.php").text();
+              window.location.reload();
+            }, 10000);
+        });
 </script>
 @include('footer')

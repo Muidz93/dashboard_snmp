@@ -8,8 +8,9 @@
         <link href=" {{ mix('css/app.css') }}" rel="stylesheet">
         <link href=" {{ asset('css/style.css') }}" rel="stylesheet">
         <link rel="icon" href="{{ asset('images/logo/favicon-snmp.png') }}" type="image/x-icon">
-        
-
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 <body>
 
@@ -20,10 +21,10 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg fixed-top">
         <div class="container">
           <a class="navbar-brand" href="/"><img src="{{url('/images/logo/snmp.png')}}" width="100"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
             @auth
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">

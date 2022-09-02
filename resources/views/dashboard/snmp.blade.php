@@ -15,8 +15,8 @@
       <div class="d-flex justify-content-center">
       <i class="bi bi-thermometer-low" style="font-size: 1.5rem;"></i><div class="my-auto"><span id="temperature">{{$snmp->temperature}} C</span></div>
       </div>
-      <div class="row pt-4 gx-4 gy-4">
-        <hr>
+      <div class="row py-4 gx-4 gy-4">
+        <hr style="width:80%; margin: auto;">
             {{-- Input Status --}}
             <div class="col-md-4">
               <div class="card crop-img">
@@ -135,7 +135,7 @@
     </div>
   </div>
 
-<script src="{{ mix('js/app.js') }}"></script>
+  <script src="{{ mix('js/app.js') }}"></script>
 <script type="text/javascript">
   $(document).ready(function() {
             setInterval(function() {
