@@ -27,6 +27,13 @@ class CreateSnmpsTable extends Migration
             $table->float('temperature');
             $table->string('PID_audio');
             $table->string('PID_audio2');
+            $table->string('satelit1')->nullable();
+            $table->string('satelit2')->nullable();
+            $table->string('satelit3')->nullable();
+            $table->string('satelit4')->nullable();
+            $table->string('sdi_out1')->nullable();
+            $table->string('sdi_out2')->nullable();
+            $table->string('sdi_out3')->nullable();
             $table->timestamps();
 
         });

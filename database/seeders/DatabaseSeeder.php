@@ -40,6 +40,14 @@ class DatabaseSeeder extends Seeder
             'temperature'=>27,
             'PID_audio' => 1,
             'PID_audio2' => 1,
+            'satelit1'=>'asiasat 5 H',
+            'satelit2'=>'asiasat 5 V',
+            'satelit3'=>'telkom 4 H',
+            'satelit4'=>'measat H',
+            'sdi_out1'=>null,
+            'sdi_out2'=>null,
+            'sdi_out3'=>null,
+            
         ]);
         snmp::create([
             'ip_control' => '192.168.112.3',
@@ -54,6 +62,14 @@ class DatabaseSeeder extends Seeder
             'temperature'=>27,
             'PID_audio' => 1,
             'PID_audio2' => 1,
+            'satelit1'=>'asiasat 5 H',
+            'satelit2'=>'asiasat 5 V',
+            'satelit3'=>'telkom 4 H',
+            'satelit4'=>'telkom 4 H gd.A',
+            'sdi_out1'=>null,
+            'sdi_out2'=>null,
+            'sdi_out3'=>null,
+            
         ]);
         snmp::create([
             'ip_control' => '192.168.112.4',
@@ -68,6 +84,14 @@ class DatabaseSeeder extends Seeder
             'temperature'=>27,
             'PID_audio' => 1,
             'PID_audio2' => 1,
+            'satelit1'=>'asiasat 5 H',
+            'satelit2'=>'asiasat 5 V',
+            'satelit3'=>null,
+            'satelit4'=>'telkom 4 H gd.A',
+            'sdi_out1'=>null,
+            'sdi_out2'=>null,
+            'sdi_out3'=>null,
+            
         ]);
         snmp::create([
             'ip_control' => '192.168.112.5',
@@ -82,6 +106,14 @@ class DatabaseSeeder extends Seeder
             'temperature'=>27,
             'PID_audio' => 1,
             'PID_audio2' => 1,
+            'satelit1'=>'asiasat 5 H',
+            'satelit2'=>'asiasat 5 V',
+            'satelit3'=>'telkom 4 H',
+            'satelit4'=>'measat H',
+            'sdi_out1'=>null,
+            'sdi_out2'=>null,
+            'sdi_out3'=>null,
+            
         ]);
         snmp::create([
             'ip_control' => '192.168.112.6',
@@ -96,6 +128,14 @@ class DatabaseSeeder extends Seeder
             'temperature'=>27,
             'PID_audio' => 1,
             'PID_audio2' => 1,
+            'satelit1'=>'asiasat 5 H',
+            'satelit2'=>'asiasat 5 V',
+            'satelit3'=>'telkom 4 H',
+            'satelit4'=>'telkom 4 H gd.A',
+            'sdi_out1'=>null,
+            'sdi_out2'=>null,
+            'sdi_out3'=>null,
+            
         ]);
         snmp::create([
             'ip_control' => '192.168.112.7',
@@ -110,6 +150,14 @@ class DatabaseSeeder extends Seeder
             'temperature'=>27,
             'PID_audio' => 1,
             'PID_audio2' => 1,
+            'satelit1'=>'asiasat 5 H',
+            'satelit2'=>'asiasat 5 V',
+            'satelit3'=>null,
+            'satelit4'=>'telkom 4 H gd.A',
+            'sdi_out1'=>null,
+            'sdi_out2'=>null,
+            'sdi_out3'=>null,
+            
         ]);
         snmp::create([
             'ip_control' => '192.168.112.8',
@@ -124,6 +172,14 @@ class DatabaseSeeder extends Seeder
             'temperature'=>27,
             'PID_audio' => 1,
             'PID_audio2' => 1,
+            'satelit1'=>'asiasat 5 H',
+            'satelit2'=>null,
+            'satelit3'=>null,
+            'satelit4'=>null,
+            'sdi_out1'=>null,
+            'sdi_out2'=>null,
+            'sdi_out3'=>null,
+            
         ]);
         snmp::create([
             'ip_control' => '192.168.112.9',
@@ -138,6 +194,14 @@ class DatabaseSeeder extends Seeder
             'temperature'=>27,
             'PID_audio' => 1,
             'PID_audio2' => 1,
+            'satelit1'=>'asiasat 5 H',
+            'satelit2'=>'asiasat 5 V',
+            'satelit3'=>null,
+            'satelit4'=>null,
+            'sdi_out1'=>null,
+            'sdi_out2'=>null,
+            'sdi_out3'=>null,
+            
         ]);
         snmp::create([
             'ip_control' => '192.168.112.10',
@@ -152,6 +216,14 @@ class DatabaseSeeder extends Seeder
             'temperature'=>27,
             'PID_audio' => 1,
             'PID_audio2' => 1,
+            'satelit1'=>null,
+            'satelit2'=>null,
+            'satelit3'=>null,
+            'satelit4'=>null,
+            'sdi_out1'=>null,
+            'sdi_out2'=>null,
+            'sdi_out3'=>null,
+            
         ]);
     }
 }

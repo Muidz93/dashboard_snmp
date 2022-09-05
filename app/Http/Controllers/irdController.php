@@ -96,4 +96,27 @@ class irdController extends Controller
             'title'=>"detail_ird"
         ]);
    }
+   public function edit($id)
+   {
+        $snmp=snmp::find($id);
+        if ($snmp === null) {
+            return redirect('/')->with('bandel', 'bandel');
+        }
+       return view('dashboard.edit',compact('snmp'),[
+            'title'=>"edit_ird"
+        ]);
+   }
+   public function postEdit($id,request $request)
+   {
+        $snmp=snmp::findOrFail($id);
+        $snmp->satelit1=$request->satelit1;
+        $snmp->satelit2=$request->satelit2;
+        $snmp->satelit3=$request->satelit3;
+        $snmp->satelit4=$request->satelit4;
+        $snmp->sdi_out1=$request->sdi_out1;
+        $snmp->sdi_out2=$request->sdi_out2;
+        $snmp->sdi_out3=$request->sdi_out3;
+        $snmp->update();
+        return redirect('/ird/'.$snmp->id);
+   }
 }

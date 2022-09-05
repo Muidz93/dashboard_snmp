@@ -9,24 +9,24 @@
 <!-- Data IRD -->
 <div class="container-fluid pt-5 pb-5 bg-light">
     <div class="container">
-    <div class="row">
-        <div class="col-md-6 my-2">
-            <a href="/data/add">
-                <span class="btn btn-success">Tambah Data +</span>
-            </a>
-        </div>
+        <div class="row">
+            <div class="col-md-6 my-2">
+                <a href="/data/add">
+                    <span class="btn btn-success">Tambah Data +</span>
+                </a>
+            </div>
 
-        <div class="col-md-4 ms-auto">
-            <form action="/data">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search...." name="search"
-                    value="{{ request('search') }}">
-                    <button class="btn btn-outline-secondary" type="submit">Search</button>
-                </div>
-            </form>
+            <div class="col-md-4 ms-auto">
+                <form action="/data">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search...." name="search"
+                            value="{{ request('search') }}">
+                        <button class="btn btn-outline-secondary" type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 
 
 
@@ -45,16 +45,47 @@
                 <tbody>
                     @if ($gdrive->count())
                         @foreach ($gdrive as $no => $drive)
-                        <tr>
-                            <td align="center">{{ $no + $gdrive->firstItem() }}</td>
-                            <td align="center">{{$drive->nama_file}}</td>
-                            <td align="center">{{$drive->owner}}</td>
-                            <td align="center"><a href="{{$drive->link}}" target="_blank" class="btn btn-info"><i class="bi bi-file-earmark-arrow-down-fill"></i></a></td>
-                            <td>
-                                <a href="/data/edit/{{$drive->id}}" class="btn btn-warning">Edit</a>
-                                <a href="/data/delete/{{$drive->id}}" onclick="return confirm('Yakin ingin hapus ? ')" class="btn btn-danger">Delete</a>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td align="center">{{ $no + $gdrive->firstItem() }}</td>
+                                <td align="center">{{ $drive->nama_file }}</td>
+                                <td align="center">{{ $drive->owner }}</td>
+                                <td align="center"><a href="{{ $drive->link }}" target="_blank" class="btn btn-info"><i
+                                            class="bi bi-file-earmark-arrow-down-fill"></i></a></td>
+                                <td>
+                                    <a href="/data/edit/{{ $drive->id }}" class="btn btn-warning">Edit</a>
+                                    {{-- <a href="/data/delete/{{ $drive->id }}"
+                                        onclick="return confirm('Yakin ingin hapus ? ')"
+                                        class="btn btn-danger">Delete</a> --}}
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                        data-target="#myModal">
+                                        Delete
+                                    </button>
+
+                                    <!-- The Modal -->
+                                    <div class="modal fade" id="myModal">
+                                        <div class="modal-dialog modal-sm">
+                                            <div class="modal-content">
+
+                                                <!-- Modal Header -->
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Apakah ingin hapus?</h4>
+                                                    <button type="button" class="close"
+                                                        data-dismiss="modal">&times;</button>
+                                                </div>
+                                                <!-- Modal footer -->
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-success"
+                                                        data-dismiss="modal">Close</button>
+                                                    <a href="/data/delete/{{ $drive->id }}"
+                                                        onclick="return confirm('Yakin ingin hapus ? ')"
+                                                        class="btn btn-danger">Delete</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
                         @endforeach
                     @else
                         <tr>

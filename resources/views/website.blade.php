@@ -1,30 +1,30 @@
 @include('header')
 <style type="text/css">
-
-            .img-icon {
-                /* border-radius: 50%; */
-                /* margin-right: 60px;
+    .img-icon {
+        /* border-radius: 50%; */
+        /* margin-right: 60px;
                 margin-top: 20px; */
-                width:100px;
-                height:100px;
-                margin: auto;
-                /* margin: 10% 10% 10% 10%; */
-                
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        /* margin: 10% 10% 10% 10%; */
 
-            }
-            .bg-icon:hover{
-                box-shadow: 1px 10px 10px #ccc;
-            }
-            .bg-icon{
-                /* width: 20%;
+
+    }
+
+    .bg-icon:hover {
+        box-shadow: 1px 10px 10px #ccc;
+    }
+
+    .bg-icon {
+        /* width: 20%;
                 height: 20%; */
-                background-color:#fcfcfc;
-                /* border-radius:80%; */
-                margin: 6% 4% 6% 4%;
-           
-            }
+        background-color: #fcfcfc;
+        /* border-radius:80%; */
+        margin: 6% 4% 6% 4%;
 
-        </style>
+    }
+</style>
 <!-- banner -->
 <div class="container-fluid banner">
     <div class="container text-center">
@@ -33,24 +33,48 @@
 </div>
 <div class="container">
     <div class="col-md-6 my-2">
-            <a href="/website/add">
-                <span class="btn btn-success">Tambah web +</span>
-            </a>
-        </div>
+        <a href="/website/add">
+            <span class="btn btn-success">Tambah web +</span>
+        </a>
+    </div>
 </div>
 <!-- Data IRD -->
 <div class="container border my-3">
     <div class="row">
         @foreach ($website as $web)
             <div class=" bg-icon col ">
-                <a href="website/delete/{{$web->id}}" class="text-decoration-none text-danger" onclick="return confirm('yakin ingin hapus')">X</a>
-                <a class="text-decoration-none" href="{{$web->link}}" target="_blank">
-                    <img src="{{asset('images/logo/'.$web->gambar)}}" class="img-icon d-flex align-content-center">
-                    <p class="text-center text-black">{{$web->nama_web}}</p>
+                {{-- <a href="website/delete/{{$web->id}}" class="text-decoration-none text-danger" onclick="return confirm('yakin ingin hapus')">X</a> --}}
+                <button type="button" class="btn btn-danger " data-toggle="modal" data-target="#myModal">
+                    X
+                </button>
+
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Apakah ingin hapus?</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                                <a href="website/delete/{{ $web->id }}"
+                                    onclick="return confirm('Yakin ingin hapus ? ')" class="btn btn-danger">Delete</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <a class="text-decoration-none" href="{{ $web->link }}" target="_blank">
+                    <img src="{{ asset('images/logo/' . $web->gambar) }}" class="img-icon d-flex align-content-center">
+                    <p class="text-center text-black">{{ $web->nama_web }}</p>
                 </a>
             </div>
         @endforeach
-            {{-- <div class=" bg-icon col">
+        {{-- <div class=" bg-icon col">
             <a class="text-decoration-none" href="http://36.89.207.251:894/" target="_blank">
                 <img src="{{asset('images/logo/prtg.png')}}" class="img-icon d-flex align-content-center">
                 <p class="text-center text-black">PRTG</p>
@@ -74,7 +98,7 @@
                 <p class="text-center text-black">Nextcloud</p>
             </a>
             </div> --}}
-            <!-- <div class=" bg-icon col">
+        <!-- <div class=" bg-icon col">
             <a href="" target="_blank">
                 <img src="" class="img-icon ">
             </a>
@@ -84,7 +108,7 @@
                 <img src="" class="img-icon ">
             </a>
             </div> -->
-        </div>
     </div>
+</div>
 <script src="{{ mix('js/app.js') }}"></script>
 @include('footer')

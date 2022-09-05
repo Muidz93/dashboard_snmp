@@ -27,6 +27,8 @@ route::group(['middleware' => ['auth']], function () {
     Route::get('/channels', [chnController::class, 'readData']);
     // Route::get('/dashboard', [DashboardController::class, 'readData']);
     Route::get('/ird/{id}', [irdController::class, 'detail']);
+    Route::get('/edit/ird/{id}', [irdController::class, 'edit']);
+    Route::post('/edit/ird/{id}', [irdController::class, 'postEdit']);
 
     Route::get('/input', [irdController::class,'index']);
     Route::post('/input', [irdController::class,'store']);
