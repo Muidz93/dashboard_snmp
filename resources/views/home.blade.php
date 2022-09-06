@@ -75,6 +75,7 @@
                             <th>IP Input</th>
                             <th>Status Video</th>
                             <th>Service</th>
+                            <th>Margin</th>
                             <th>temperature</th>
                             {{-- <th>Margin</th>
                     <th>Bitrate</th> --}}
@@ -92,6 +93,7 @@
                                 <td><span id="status_ip{{ $no }}">{{ $rsp->status_ip }}</span></td>
                                 <td><span id="status_video{{ $no }}">{{ $rsp->status_video }}</span></td>
                                 <td><span id="service{{ $no }}">{{ $rsp->service }}</span></td>
+                                <td><span id="margin{{ $no }}">{{ $rsp->margin }} dB</span></td>
                                 <td><span id="temperature{{ $no }}">{{ $rsp->temperature }} C</span></td>
                                 {{-- <td><span id="margin{{$no}}">{{$rsp->margin}}</span> dB</td>
                 <td><span id="bitrate{{$no}}">{{$rsp->video_bitrate}}</span></td> --}}

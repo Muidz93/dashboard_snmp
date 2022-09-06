@@ -15,18 +15,18 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        user::create([
-            'name' => 'toa',
-            'email' => 'toa@gmail.com',
-            'password' => bcrypt('mediakind123'),
-            // 'level' => 'user',
-        ]);
-        user::create([
-            'name' => 'admin',
-            'email' => 'admin@gmail.com',
-            'password' => bcrypt('admin123'),
-            // 'level' => 'admin',
-        ]);
+        // user::create([
+        //     'name' => 'toa',
+        //     'email' => 'toa@gmail.com',
+        //     'password' => bcrypt('mediakind123'),
+        //     // 'level' => 'user',
+        // ]);
+        // user::create([
+        //     'name' => 'admin',
+        //     'email' => 'admin@gmail.com',
+        //     'password' => bcrypt('admin123'),
+        //     // 'level' => 'admin',
+        // ]);
         snmp::create([
             'ip_control' => '192.168.112.2',
             'ts_bitrate' => 5.5,
