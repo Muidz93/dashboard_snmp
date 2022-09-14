@@ -53,10 +53,10 @@
 
                 <tbody>
                 @if ($channels->count())
-                    <?php $no=1; ?>
-                @foreach ($channels as $cn)
+                    
+                @foreach ($channels as $no => $cn)
                         <tr>
-                            <td align="center">{{ $no++}}</td>
+                            <td align="center">{{ $no + $channels->firstItem()}}</td>
                             <td align="center">{{ $cn->nmr }}</td>
                             <td align="center">{{ $cn->nama_chn }}</td>
                             <td align="center">{{ $cn->kualitas }}</td>
@@ -86,6 +86,11 @@
             </table>
         </div>
     </div>
+
+    <div class="d-flex justify-content-end">
+        {{ $channels->links() }}
+    </div>
+    
 </div>
 <script src="{{ mix('js/app.js') }}"></script>
 @include('footer')
