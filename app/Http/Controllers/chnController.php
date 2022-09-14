@@ -19,7 +19,7 @@ class chnController extends Controller
     {
         // $channels = DB::table('channels')->get();
         return view('channel',[
-            "channels" => channel::orderBy('nmr','asc')->latest()->filter(request(['search']))->paginate(2)->withQueryString(),
+            "channels" => channel::orderBy('nmr','asc')->latest()->filter(request(['search']))->paginate(10)->withQueryString(),
             "title"=>'channels'
         ]);
     }
