@@ -10,25 +10,25 @@
 <!-- Data Channel -->
 <div class="container-fluid pt-5 pb-5 bg-light">
     <div class="container">
-    <div class="row">
-        <div class="col-md-6 my-2">
-            <a href="/channel">
-                <span class="btn btn-success">Tambah Data +</span>
-            </a>
-        </div>
+        <div class="row">
+            <div class="col-md-6 my-2">
+                <a href="/channel">
+                    <span class="btn btn-success">Tambah Data +</span>
+                </a>
+            </div>
 
-        <div class="col-md-4 ms-auto">
-            <form action="/channels">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search...." name="search"
-                    value="{{ request('search') }}">
-                    <button class="btn btn-outline-secondary" type="submit">Search</button>
-                </div>
-            </form>
+            <div class="col-md-4 ms-auto">
+                <form action="/channels">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search...." name="search"
+                            value="{{ request('search') }}">
+                        <button class="btn btn-outline-secondary" type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
-    
+
 
     <div class="container text-center">
         <div class="row pt-4 gx-4 gy-4 table-responsive">
@@ -42,7 +42,6 @@
                         <th>Downlink</th>
                         <th>Source</th>
                         <th>Frequensi</th>
-                        <th>Polaris</th>
                         <th>Symbol Rate</th>
                         <th>Metro</th>
                         <th>Multicast</th>
@@ -53,10 +52,10 @@
 
                 <tbody>
                 @if ($channels->count())
-                    
-                @foreach ($channels as $no => $cn)
+                    <?php $no=1; ?>
+                @foreach ($channels as $cn)
                         <tr>
-                            <td align="center">{{ $no + $channels->firstItem()}}</td>
+                            <td align="center">{{ $no++}}</td>
                             <td align="center">{{ $cn->nmr }}</td>
                             <td align="center">{{ $cn->nama_chn }}</td>
                             <td align="center">{{ $cn->kualitas }}</td>

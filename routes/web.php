@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\chnController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\encController;
 use App\Http\Controllers\irdController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\loginController;
@@ -24,14 +25,18 @@ use App\Http\Controllers\registerController;
 
 route::group(['middleware' => ['auth']], function () {
     Route::get('/list_ird', [irdController::class,'readData']);
+    Route::get('/list_ird/input', [irdController::class,'index']);
+    Route::post('/list_ird/input', [irdController::class,'store']);
+    Route::get('/list_ird/edit/{id}', [irdController::class,'editIrd']);
+    Route::post('/list_ird/edit/{id}', [irdController::class,'postIrd']);
+    Route::get('/list_ird/hapus/{id}', [irdController::class, 'hapus']);
+
     Route::get('/channels', [chnController::class, 'readData']);
     // Route::get('/dashboard', [DashboardController::class, 'readData']);
     Route::get('/ird/{id}', [irdController::class, 'detail']);
     Route::get('/edit/ird/{id}', [irdController::class, 'edit']);
     Route::post('/edit/ird/{id}', [irdController::class, 'postEdit']);
 
-    Route::get('/input', [irdController::class,'index']);
-    Route::post('/input', [irdController::class,'store']);
 
     Route::get('/', [irdController::class,'hitung']);
 
@@ -51,7 +56,14 @@ route::group(['middleware' => ['auth']], function () {
     Route::get('/data/edit/{id}', [chnController::class, 'gdriveedit']);
     Route::post('/data/edit/{id}', [chnController::class, 'gdriveeditPost']);
     Route::get('/data/delete/{id}', [chnController::class, 'gdriveDelete']);
-    Route::get('/encoder', [chnController::class, 'encoder']);
+    // ===========================
+    Route::get('/encoder', [encController::class, 'index']);
+    Route::get('/encoder/add', [encController::class, 'create']);
+    Route::post('/encoder/add', [encController::class, 'store']);
+    Route::get('/encoder/edit/{id}', [encController::class, 'show']);
+    Route::post('/encoder/edit/{id}', [encController::class, 'edit']);
+    Route::get('/encoder/delete/{id}', [encController::class, 'destroy']);
+    // ===========================
     Route::get('/irdlive/add', [chnController::class, 'irdLiveAdd']);
     Route::post('/irdlive/add', [chnController::class, 'irdLivePost']);
 });
