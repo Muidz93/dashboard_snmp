@@ -14,7 +14,7 @@ class irdController extends Controller
 {
     public function readData()
     {
-        return view('list_ird',[
+        return view('ird.list_ird',[
             "title" => "List IRD",
             "active" => 'list_ird',
             "irds" => ird::latest()->filter(request(['search']))->paginate(10)->withQueryString(),
@@ -25,7 +25,7 @@ class irdController extends Controller
     public function index()
     {
         $irds = new ird;
-        return view('input.input_ird', compact('irds'), [
+        return view('ird.input_ird', compact('irds'), [
             'title' => 'Input_IRD'
         ]);
     }
@@ -118,5 +118,33 @@ class irdController extends Controller
         $snmp->sdi_out3=$request->sdi_out3;
         $snmp->update();
         return redirect('/ird/'.$snmp->id);
+   }
+   public function editIrd($id)
+   {
+        $ird=ird::find($id);
+        return view('ird.edit',compact('ird'),[
+            'title'=>"edit_ird"
+        ]);
+   }
+   public function postIrd($id,request $request)
+   {
+        $ird = ird::find($id);
+        $ird->merk = $request->merk;
+        $ird->type = $request->type;
+        $ird->sn = $request->sn;
+        $ird->control = $request->control;
+        $ird->owner = $request->owner;
+        $ird->channel = $request->channel;
+        $ird->update();
+        return redirect('/list_ird')->with('berhasil','berhasil ubah data');
+   }
+   public function hapus($id)
+   {
+        $ird=ird::find($id);
+         if ($ird === null) {
+            return redirect('/')->with('bandel', 'id tidak di temukan');
+        }
+        $ird->delete();
+        return redirect()->back();
    }
 }
